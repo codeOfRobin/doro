@@ -11,9 +11,12 @@ import UIKit
 class SettingsViewController: UIViewController {
 
 	@IBAction func saveSettings(sender: AnyObject) {
-		self.dismissViewControllerAnimated(true) { 
-			
-		}
+		print(workTimePicker.date)
+		print(breakTimePicker.date)
+	}
+	
+	@IBAction func cancelButton(sender: AnyObject) {
+		
 	}
 	
 	@IBOutlet weak var workTimePicker: UIDatePicker!

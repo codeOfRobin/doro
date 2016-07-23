@@ -14,40 +14,40 @@ enum PomodoroState {
 	Success,
 	Failure,
 	Work,
-	Play
+	Break
 }
 
 class PomodoroTracker: Object{
 	var state: PomodoroState = .HasntStarted
 	var workStartTime = NSDate()
-	var workTimeInterval = NSTimeInterval(integerLiteral: 25*60)
-	var playStartTime = NSDate()
-	var playTimeInterval = NSTimeInterval(integerLiteral: 5*60)
+	var workTimeInterval = NSUserDefaults.standardUserDefaults().valueForKey("workTimeInterval") as? NSTimeInterval ?? NSTimeInterval(integerLiteral: 25*60)
+	var breakStartTime = NSDate()
+	var breakTimeInterval = NSUserDefaults.standardUserDefaults().valueForKey("breakTimeInterval") as? NSTimeInterval ?? NSTimeInterval(integerLiteral: 5*60)
 	static let sharedPomodoroTracker = PomodoroTracker()
 	
 	func startWork(for minutes: Int?) {
 		state = .Work
 		workStartTime = NSDate()
 		if let minutes = minutes {
-			workTimeInterval = NSTimeInterval(minutes)
+			breakTimeInterval = NSTimeInterval(minutes)
 		}
 		print("Start Working")
 	}
 	// TODO: DRY up code below here
-	func startPlay(for minutes: Int?) {
-		state = .Play
-		playStartTime = NSDate()
+	func startbreak(for minutes: Int?) {
+		state = .Break
+		breakStartTime = NSDate()
 		if let minutes = minutes {
-			playTimeInterval = NSTimeInterval(minutes)
+			breakTimeInterval = NSTimeInterval(minutes)
 		}
 	}
-	
 	func reinitPomodoro() {
+		//TODO: DRY up this code and the property inits as well
 		state = .HasntStarted
 		workStartTime = NSDate()
-		workTimeInterval = NSTimeInterval(integerLiteral: 25*60)
-		playStartTime = NSDate()
-		playTimeInterval = NSTimeInterval(integerLiteral: 5*60)
+		workTimeInterval = NSUserDefaults.standardUserDefaults().valueForKey("workTimeInterval") as? NSTimeInterval ?? NSTimeInterval(integerLiteral: 25*60)
+		breakStartTime = NSDate()
+		breakTimeInterval = NSUserDefaults.standardUserDefaults().valueForKey("breakTimeInterval") as? NSTimeInterval ?? NSTimeInterval(integerLiteral: 5*60)
 	}
 	func saveToDB() {
 		let realm = try! Realm()
