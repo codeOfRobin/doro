@@ -10,9 +10,12 @@ import UIKit
 
 class MainTimerViewController: UIViewController {
 	
+	override func viewDidAppear(animated: Bool) {
+		
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		//		let containerView = UIView(frame: view.frame)
 		let grad = CAGradientLayer()
 		grad.frame = view.frame
 		grad.colors = [UIColor(red:0.06, green:0.47, blue:0.88, alpha:1.00).CGColor, UIColor(red:0.16, green:0.78, blue:0.24, alpha:1.00).CGColor]
@@ -25,7 +28,6 @@ class MainTimerViewController: UIViewController {
 		super.didReceiveMemoryWarning()
 		// Dispose of any resources that can be recreated.
 	}
-	
 	
 	/*
 	// MARK: - Navigation

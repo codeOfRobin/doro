@@ -98,16 +98,16 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="LGg-Mb-04J">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="2" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGg-Mb-04J">
                                 <rect key="frame" x="140" y="318" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="490983233.05743599">
                                     <!--2016-07-23 16:13:53 +0000-->
                                 </date>
                             </datePicker>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="4" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSJ-J3-REC">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="2" minuteInterval="4" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSJ-J3-REC">
                                 <rect key="frame" x="140" y="57" width="320" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="490818620.80509502">
-                                    <!--2016-07-21 18:30:20 +0000-->
+                                <date key="date" timeIntervalSinceReferenceDate="490818600.80509502">
+                                    <!--2016-07-21 18:30:00 +0000-->
                                 </date>
                             </datePicker>
                         </subviews>

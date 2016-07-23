@@ -11,12 +11,17 @@ import UIKit
 class SettingsViewController: UIViewController {
 
 	@IBAction func saveSettings(sender: AnyObject) {
-		print(workTimePicker.date)
-		print(breakTimePicker.date)
+		NSUserDefaults.standardUserDefaults().setValue(workTimePicker.countDownDuration, forKey: "workTimeInterval")
+		NSUserDefaults.standardUserDefaults().setValue(breakTimePicker.countDownDuration, forKey: "breakTimeInterval")
+		PomodoroTracker.sharedPomodoroTracker.workTimeInterval = workTimePicker.countDownDuration
+		PomodoroTracker.sharedPomodoroTracker.breakTimeInterval = workTimePicker.countDownDuration
+		self.dismissViewControllerAnimated(true) { 
+		}
 	}
 	
 	@IBAction func cancelButton(sender: AnyObject) {
-		
+		self.dismissViewControllerAnimated(true) {
+		}
 	}
 	
 	@IBOutlet weak var workTimePicker: UIDatePicker!
