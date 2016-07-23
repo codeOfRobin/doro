@@ -34,7 +34,8 @@ class SettingsViewController: UIViewController {
 		breakTimePicker.performSelector(Selector("setHighlightsToday:"), withObject:UIColor.whiteColor())
 		workTimePicker.timeZone =  NSTimeZone(abbreviation: "UTC")
 		breakTimePicker.timeZone =  NSTimeZone(abbreviation: "UTC")
-		PomodoroTracker.sharedPomodoroTracker.reinitPomodoro()
+		workTimePicker.countDownDuration = 1500
+		breakTimePicker.countDownDuration = 300
         // Do any additional setup after loading the view.
     }
 

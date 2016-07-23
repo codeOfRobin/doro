@@ -33,13 +33,24 @@
                                     </segue>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwW-HR-oYv">
+                                <rect key="frame" x="226" y="98" width="148" height="78"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="65"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.054901960784313725" green="0.4392156862745098" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="qeF-J7-YcW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="2ir-Mc-n8H"/>
+                            <constraint firstItem="DwW-HR-oYv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MFb-cM-AYW"/>
                             <constraint firstItem="qeF-J7-YcW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="fjX-iP-kUK"/>
+                            <constraint firstItem="DwW-HR-oYv" firstAttribute="top" secondItem="qeF-J7-YcW" secondAttribute="bottom" constant="40" id="ngr-ax-cms"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="timeLeft" destination="DwW-HR-oYv" id="pjx-O6-ggf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -104,7 +115,7 @@
                                     <!--2016-07-23 16:13:53 +0000-->
                                 </date>
                             </datePicker>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="2" minuteInterval="4" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSJ-J3-REC">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="2" minuteInterval="5" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSJ-J3-REC">
                                 <rect key="frame" x="140" y="57" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="490818600.80509502">
                                     <!--2016-07-21 18:30:00 +0000-->

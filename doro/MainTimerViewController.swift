@@ -10,8 +10,10 @@ import UIKit
 
 class MainTimerViewController: UIViewController {
 	
+	@IBOutlet weak var timeLeft: UILabel!
+	
 	override func viewDidAppear(animated: Bool) {
-		
+		timeLeft.text = PomodoroTracker.sharedPomodoroTracker.prettyPrintedTimeLeft
 	}
 	
 	override func viewDidLoad() {
