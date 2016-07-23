@@ -16,9 +16,17 @@ class SettingsViewController: UIViewController {
 		}
 	}
 	
+	@IBOutlet weak var workTimePicker: UIDatePicker!
+	@IBOutlet weak var breakTimePicker: UIDatePicker!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+		workTimePicker.setValue(UIColor.whiteColor(), forKey: "textColor")
+		breakTimePicker.setValue(UIColor.whiteColor(), forKey: "textColor")
+	workTimePicker.performSelector(Selector("setHighlightsToday:"), withObject:UIColor.whiteColor())
+		breakTimePicker.performSelector(Selector("setHighlightsToday:"), withObject:UIColor.whiteColor())
+		workTimePicker.timeZone =  NSTimeZone(abbreviation: "UTC")
+		breakTimePicker.timeZone =  NSTimeZone(abbreviation: "UTC")
+		PomodoroTracker.sharedPomodoroTracker.reinitPomodoro()
         // Do any additional setup after loading the view.
     }
 

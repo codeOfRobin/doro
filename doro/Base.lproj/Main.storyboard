@@ -57,34 +57,91 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="4" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSJ-J3-REC">
-                                <rect key="frame" x="122" y="240" width="320" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="490818620.80509502">
-                                    <!--2016-07-21 18:30:20 +0000-->
-                                </date>
-                            </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select a work timer!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3l1-jQ-H6h">
-                                <rect key="frame" x="224" y="28" width="152" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3l1-jQ-H6h">
+                                <rect key="frame" x="245" y="20" width="110" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmn-6J-wsA">
-                                <rect key="frame" x="20" y="562" width="274" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmn-6J-wsA">
+                                <rect key="frame" x="20" y="549" width="274" height="43"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="467-lB-1o3"/>
+                                    <constraint firstAttribute="width" constant="274" id="bbw-3O-LtO"/>
+                                </constraints>
                                 <state key="normal" title="Save">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="bbw-3O-LtO"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="saveSettings:" destination="MpK-7A-R3A" eventType="touchUpInside" id="unX-Qo-9wh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4v-td-sRE">
+                                <rect key="frame" x="302" y="549" width="274" height="43"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Break Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfy-R1-rWk">
+                                <rect key="frame" x="243" y="289" width="114" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="LGg-Mb-04J">
+                                <rect key="frame" x="140" y="318" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="490983233.05743599">
+                                    <!--2016-07-23 16:13:53 +0000-->
+                                </date>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="4" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSJ-J3-REC">
+                                <rect key="frame" x="140" y="57" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="490818620.80509502">
+                                    <!--2016-07-21 18:30:20 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" red="0.050980392156862744" green="0.42745098039215684" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="HYm-oI-Jtj" firstAttribute="top" secondItem="dmn-6J-wsA" secondAttribute="bottom" constant="8" id="ATL-W2-ey2"/>
+                            <constraint firstItem="HYm-oI-Jtj" firstAttribute="top" secondItem="v4v-td-sRE" secondAttribute="bottom" constant="8" id="CYA-VO-gxZ"/>
+                            <constraint firstItem="LGg-Mb-04J" firstAttribute="centerX" secondItem="0cQ-23-iyS" secondAttribute="centerX" id="DGD-cc-hVE"/>
+                            <constraint firstItem="RSJ-J3-REC" firstAttribute="top" secondItem="3l1-jQ-H6h" secondAttribute="bottom" constant="16" id="JcI-pw-OWf"/>
+                            <constraint firstItem="dmn-6J-wsA" firstAttribute="height" secondItem="v4v-td-sRE" secondAttribute="height" id="PIq-4w-M2X"/>
+                            <constraint firstItem="dmn-6J-wsA" firstAttribute="baseline" secondItem="v4v-td-sRE" secondAttribute="baseline" id="Reb-Q0-gZW"/>
+                            <constraint firstItem="v4v-td-sRE" firstAttribute="baseline" secondItem="dmn-6J-wsA" secondAttribute="baseline" id="SfM-v8-wwc"/>
+                            <constraint firstItem="3l1-jQ-H6h" firstAttribute="centerX" secondItem="0cQ-23-iyS" secondAttribute="centerX" id="Tko-eX-aqL"/>
                             <constraint firstItem="HYm-oI-Jtj" firstAttribute="top" secondItem="dmn-6J-wsA" secondAttribute="bottom" constant="8" id="UfQ-kS-C5I"/>
+                            <constraint firstItem="RSJ-J3-REC" firstAttribute="centerX" secondItem="0cQ-23-iyS" secondAttribute="centerX" id="Uhb-DJ-uDf"/>
+                            <constraint firstItem="v4v-td-sRE" firstAttribute="leading" secondItem="dmn-6J-wsA" secondAttribute="trailing" constant="8" id="Ztd-Bs-zMl"/>
+                            <constraint firstItem="3l1-jQ-H6h" firstAttribute="top" secondItem="8qP-RX-9mf" secondAttribute="bottom" id="aKD-L7-1aP"/>
+                            <constraint firstItem="kfy-R1-rWk" firstAttribute="centerX" secondItem="0cQ-23-iyS" secondAttribute="centerX" id="bXS-YX-g3Q"/>
+                            <constraint firstItem="LGg-Mb-04J" firstAttribute="height" secondItem="RSJ-J3-REC" secondAttribute="height" id="fTi-ka-FJG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="v4v-td-sRE" secondAttribute="trailing" constant="4" id="gqK-dT-atu"/>
+                            <constraint firstItem="LGg-Mb-04J" firstAttribute="top" secondItem="kfy-R1-rWk" secondAttribute="bottom" constant="8" id="nYF-U4-iN7"/>
+                            <constraint firstItem="kfy-R1-rWk" firstAttribute="top" secondItem="RSJ-J3-REC" secondAttribute="bottom" constant="16" id="pUE-ee-Shm"/>
                             <constraint firstAttribute="leadingMargin" secondItem="dmn-6J-wsA" secondAttribute="leading" id="r2y-ct-3se"/>
+                            <constraint firstItem="v4v-td-sRE" firstAttribute="top" secondItem="LGg-Mb-04J" secondAttribute="bottom" constant="15" id="tYz-W1-e02"/>
+                            <constraint firstItem="v4v-td-sRE" firstAttribute="width" secondItem="dmn-6J-wsA" secondAttribute="width" id="ze1-C2-TSM"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="UfQ-kS-C5I"/>
+                                <exclude reference="SfM-v8-wwc"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="breakTimePicker" destination="LGg-Mb-04J" id="H7Y-VI-TEq"/>
+                        <outlet property="workTimePicker" destination="RSJ-J3-REC" id="xOa-2g-yhO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7ol-9h-CUr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
