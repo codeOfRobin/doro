@@ -22,6 +22,7 @@
 		0D2AF7041D43B60700287D3A /* SwiftCharts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2AF6FB1D43B5FE00287D3A /* SwiftCharts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0D2AF7091D43B6F100287D3A /* MainTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AF7081D43B6F100287D3A /* MainTimerViewController.swift */; };
 		0D2AF70B1D43B7FC00287D3A /* PomodoroTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AF70A1D43B7FC00287D3A /* PomodoroTracker.swift */; };
+		0D2AF70F1D43C14600287D3A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AF70E1D43C14600287D3A /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		0D2AF6FB1D43B5FE00287D3A /* SwiftCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCharts.framework; path = Carthage/Build/iOS/SwiftCharts.framework; sourceTree = "<group>"; };
 		0D2AF7081D43B6F100287D3A /* MainTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTimerViewController.swift; sourceTree = "<group>"; };
 		0D2AF70A1D43B7FC00287D3A /* PomodoroTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PomodoroTracker.swift; sourceTree = "<group>"; };
+		0D2AF70E1D43C14600287D3A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				0D2AF7081D43B6F100287D3A /* MainTimerViewController.swift */,
 				0D2AF70A1D43B7FC00287D3A /* PomodoroTracker.swift */,
 				0D2AF6CF1D43B4C900287D3A /* Main.storyboard */,
+				0D2AF70E1D43C14600287D3A /* SettingsViewController.swift */,
 				0D2AF6D21D43B4C900287D3A /* Assets.xcassets */,
 				0D2AF6D41D43B4C900287D3A /* LaunchScreen.storyboard */,
 				0D2AF6D71D43B4C900287D3A /* Info.plist */,
@@ -316,6 +319,7 @@
 				0D2AF7091D43B6F100287D3A /* MainTimerViewController.swift in Sources */,
 				0D2AF6CE1D43B4C900287D3A /* ViewController.swift in Sources */,
 				0D2AF6CC1D43B4C900287D3A /* AppDelegate.swift in Sources */,
+				0D2AF70F1D43C14600287D3A /* SettingsViewController.swift in Sources */,
 				0D2AF70B1D43B7FC00287D3A /* PomodoroTracker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
