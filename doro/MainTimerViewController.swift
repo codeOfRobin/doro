@@ -1,3 +1,4 @@
+
 //
 //  MainTimerViewController.swift
 //  doro
@@ -8,11 +9,27 @@
 
 import UIKit
 
-class MainTimerViewController: UIViewController {
+class MainTimerViewController: UIViewController, PomodoroTrackerDelegate {
 	
 	@IBOutlet weak var timeLeft: UILabel!
 	
-	override func viewDidAppear(animated: Bool) {
+	override func viewWillAppear(animated: Bool) {
+		super.viewWillAppear(animated)
+		PomodoroTracker.sharedPomodoroTracker.delegate = self
+		timeLeft.text = PomodoroTracker.sharedPomodoroTracker.prettyPrintedTimeLeft
+	}
+	
+	func pomodoroDidChangeState() {
+		
+	}
+	
+	@IBAction func startWorkPeriod(sender: AnyObject) {
+		PomodoroTracker.sharedPomodoroTracker.startWork()
+		let updateTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(MainTimerViewController.updateFunction(_:)), userInfo: nil, repeats: true)
+		NSRunLoop.currentRunLoop().addTimer(updateTimer, forMode: NSRunLoopCommonModes)
+	}
+	
+	func updateFunction(sender: NSTimer) {
 		timeLeft.text = PomodoroTracker.sharedPomodoroTracker.prettyPrintedTimeLeft
 	}
 	

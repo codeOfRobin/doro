@@ -6,7 +6,7 @@
 //  Copyright © 2016 comicsanshq. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import RealmSwift
 
 enum PomodoroState {
@@ -17,13 +17,29 @@ enum PomodoroState {
 	Break
 }
 
+protocol PomodoroTrackerDelegate {
+	func pomodoroDidChangeState()
+}
+
 class PomodoroTracker: Object{
-	var state: PomodoroState = .HasntStarted
+	
+	var state: PomodoroState = .HasntStarted {
+		didSet {
+			print(state)
+		}
+	}
+	
 	// TODO: check if this can be a lazy var
 	var workStartTime = NSDate()
+	
 	var workTimeInterval = NSUserDefaults.standardUserDefaults().valueForKey("workTimeInterval") as? NSTimeInterval ?? NSTimeInterval(integerLiteral: 25*60)
+	
 	var breakStartTime = NSDate()
+	
 	var breakTimeInterval = NSUserDefaults.standardUserDefaults().valueForKey("breakTimeInterval") as? NSTimeInterval ?? NSTimeInterval(integerLiteral: 5*60)
+	
+	var delegate: PomodoroTrackerDelegate?
+	
 	static let sharedPomodoroTracker = PomodoroTracker()
 	
 	var timeLeft: NSTimeInterval {
@@ -41,7 +57,12 @@ class PomodoroTracker: Object{
 		}
 
 	}
+	
 	var prettyPrintedTimeLeft: String {
+		if timeLeft < 0
+		{
+			return "00:00"
+		}
 		var minutes = "\(Int(timeLeft/60))"
 		var seconds = "\(Int(timeLeft%60))"
 		if timeLeft/60 < 10 {
@@ -52,22 +73,22 @@ class PomodoroTracker: Object{
 		}
 		return "\(minutes):\(seconds)"
 	}
-	func startWork(for minutes: Int?) {
+	
+	func startWork() {
 		state = .Work
 		workStartTime = NSDate()
-		if let minutes = minutes {
-			breakTimeInterval = NSTimeInterval(minutes)
-		}
-		print("Start Working")
+		let notification = UILocalNotification()
+		notification.alertBody = "Your Work period is over. Time to take a break"
+		notification.alertTitle = "Break Time!"
+		notification.fireDate = NSDate(timeIntervalSinceNow: timeLeft)
+		UIApplication.sharedApplication().scheduleLocalNotification(notification)
 	}
-	// TODO: DRY up code below here
-	func startbreak(for minutes: Int?) {
+	
+	func startbreak() {
 		state = .Break
 		breakStartTime = NSDate()
-		if let minutes = minutes {
-			breakTimeInterval = NSTimeInterval(minutes)
-		}
 	}
+	
 	func reinitPomodoro() {
 		//TODO: DRY up this code and the property inits as well
 		state = .HasntStarted
@@ -76,6 +97,23 @@ class PomodoroTracker: Object{
 		breakStartTime = NSDate()
 		breakTimeInterval = NSUserDefaults.standardUserDefaults().valueForKey("breakTimeInterval") as? NSTimeInterval ?? NSTimeInterval(integerLiteral: 5*60)
 	}
+	
+	func affirmativeTransition() {
+		if state == .Work {
+			state = .Break
+			startbreak()
+		}
+		else if state == .Break {
+			state = .Work
+			startWork()
+		}
+		else {
+			fatalError("You're not supposed to do an affirmativeTransition() from a non work or non Break state")
+		}
+	}
+	
+	
+	
 	func saveToDB() {
 		let realm = try! Realm()
 		try! realm.write {

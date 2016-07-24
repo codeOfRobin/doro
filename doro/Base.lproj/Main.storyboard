@@ -39,13 +39,24 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="td1-S1-eK6">
+                                <rect key="frame" x="237" y="535" width="126" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Start Work"/>
+                                <connections>
+                                    <action selector="startWorkPeriod:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BE5-dz-xUg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.054901960784313725" green="0.4392156862745098" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="td1-S1-eK6" secondAttribute="bottom" constant="20" id="0Fb-XL-T2g"/>
                             <constraint firstItem="qeF-J7-YcW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="2ir-Mc-n8H"/>
                             <constraint firstItem="DwW-HR-oYv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MFb-cM-AYW"/>
                             <constraint firstItem="qeF-J7-YcW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="fjX-iP-kUK"/>
                             <constraint firstItem="DwW-HR-oYv" firstAttribute="top" secondItem="qeF-J7-YcW" secondAttribute="bottom" constant="40" id="ngr-ax-cms"/>
+                            <constraint firstItem="td1-S1-eK6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zLG-6L-KDL"/>
                         </constraints>
                     </view>
                     <connections>
@@ -115,7 +126,7 @@
                                     <!--2016-07-23 16:13:53 +0000-->
                                 </date>
                             </datePicker>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="2" minuteInterval="5" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSJ-J3-REC">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" countDownDuration="2" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RSJ-J3-REC">
                                 <rect key="frame" x="140" y="57" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="490818600.80509502">
                                     <!--2016-07-21 18:30:00 +0000-->
