@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
     </dependencies>
     <scenes>
         <!--Main Timer View Controller-->
@@ -27,22 +26,13 @@
                                 </constraints>
                                 <state key="normal" image="Gear"/>
                                 <connections>
-                                    <segue destination="MpK-7A-R3A" kind="presentation" identifier="showSettings" id="pk9-LB-EY7">
-                                        <segue key="commit" inheritsFrom="parent" id="G5K-WA-Hx6"/>
-                                        <segue key="preview" inheritsFrom="commit" id="4KZ-8G-gwb"/>
-                                    </segue>
+                                    <segue destination="MpK-7A-R3A" kind="presentation" identifier="showSettings" id="pk9-LB-EY7"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwW-HR-oYv">
                                 <rect key="frame" x="226" y="98" width="148" height="78"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="65"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Working?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIN-nG-BkO">
-                                <rect key="frame" x="20" y="203" width="560" height="43"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="td1-S1-eK6">
@@ -64,18 +54,38 @@
                                     <action selector="mainButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E2D-cN-pqj"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Working?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIN-nG-BkO">
+                                <rect key="frame" x="20" y="203" width="560" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qds-OK-dhn">
+                                <rect key="frame" x="285" y="28" width="30" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QOT-fC-eGM"/>
+                                    <constraint firstAttribute="width" constant="30" id="wFT-VV-jLa"/>
+                                </constraints>
+                                <state key="normal" image="Note"/>
+                                <connections>
+                                    <segue destination="eff-Cy-T12" kind="presentation" identifier="showTones" id="XKR-KG-IxZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.054901960784313725" green="0.4392156862745098" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="td1-S1-eK6" secondAttribute="bottom" constant="20" id="0Fb-XL-T2g"/>
                             <constraint firstItem="qeF-J7-YcW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="2ir-Mc-n8H"/>
                             <constraint firstItem="DwW-HR-oYv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MFb-cM-AYW"/>
+                            <constraint firstItem="qds-OK-dhn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ZNm-ma-jYP"/>
                             <constraint firstAttribute="leadingMargin" secondItem="NIN-nG-BkO" secondAttribute="leading" id="Ziy-oR-VNQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NIN-nG-BkO" secondAttribute="trailing" id="b4c-iq-0n9"/>
                             <constraint firstItem="NIN-nG-BkO" firstAttribute="top" secondItem="DwW-HR-oYv" secondAttribute="bottom" constant="27" id="dZD-qJ-Ucd"/>
                             <constraint firstItem="qeF-J7-YcW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="fjX-iP-kUK"/>
                             <constraint firstItem="NIN-nG-BkO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kK2-vt-U0m"/>
                             <constraint firstItem="DwW-HR-oYv" firstAttribute="top" secondItem="qeF-J7-YcW" secondAttribute="bottom" constant="40" id="ngr-ax-cms"/>
+                            <constraint firstItem="qds-OK-dhn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p8U-rc-jXS"/>
                             <constraint firstItem="td1-S1-eK6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zLG-6L-KDL"/>
                         </constraints>
                         <variation key="default">
@@ -93,6 +103,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-950" y="421"/>
+        </scene>
+        <!--Set Tone View Controller-->
+        <scene sceneID="75M-N1-byj">
+            <objects>
+                <viewController id="eff-Cy-T12" customClass="SetToneViewController" customModule="__doro" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yTi-Nr-fba"/>
+                        <viewControllerLayoutGuide type="bottom" id="WZm-KP-8KA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C3Q-qN-32v">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="luY-1K-Cvy">
+                                <rect key="frame" x="140" y="192" width="320" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VyO-7j-F1Y">
+                                <rect key="frame" x="225" y="532" width="150" height="48"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Z5l-K2-FYY"/>
+                                    <constraint firstAttribute="width" constant="150" id="eSn-Ug-soF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveSound:" destination="eff-Cy-T12" eventType="touchUpInside" id="ukO-wV-w1W"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.066666666666666666" green="0.35294117647058826" blue="0.65490196078431373" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="WZm-KP-8KA" firstAttribute="top" secondItem="VyO-7j-F1Y" secondAttribute="bottom" constant="20" id="AQQ-f0-EbC"/>
+                            <constraint firstItem="luY-1K-Cvy" firstAttribute="centerY" secondItem="C3Q-qN-32v" secondAttribute="centerY" id="TwZ-Yw-X3e"/>
+                            <constraint firstItem="VyO-7j-F1Y" firstAttribute="centerX" secondItem="C3Q-qN-32v" secondAttribute="centerX" id="Zr7-Pi-VfW"/>
+                            <constraint firstItem="luY-1K-Cvy" firstAttribute="centerX" secondItem="C3Q-qN-32v" secondAttribute="centerX" id="enm-nX-sLm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="songPickerView" destination="luY-1K-Cvy" id="ZRM-6O-Uda"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dod-rD-I74" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-950" y="-266"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="sdd-aI-zxZ">
@@ -202,8 +257,6 @@
     </scenes>
     <resources>
         <image name="Gear" width="92" height="92"/>
+        <image name="Note" width="66" height="88"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="pk9-LB-EY7"/>
-    </inferredMetricsTieBreakers>
 </document>

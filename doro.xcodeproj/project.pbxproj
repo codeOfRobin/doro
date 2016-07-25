@@ -24,7 +24,12 @@
 		0D2AF70B1D43B7FC00287D3A /* PomodoroTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AF70A1D43B7FC00287D3A /* PomodoroTracker.swift */; };
 		0D2AF70F1D43C14600287D3A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AF70E1D43C14600287D3A /* SettingsViewController.swift */; };
 		0D2AF7141D462D0100287D3A /* ExtensionsAndConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AF7131D462D0100287D3A /* ExtensionsAndConstants.swift */; };
-		0D2AF7171D4663BC00287D3A /* asdf.aif in Resources */ = {isa = PBXBuildFile; fileRef = 0D2AF7161D4663BC00287D3A /* asdf.aif */; };
+		0D2AF7171D4663BC00287D3A /* sound1.aif in Resources */ = {isa = PBXBuildFile; fileRef = 0D2AF7161D4663BC00287D3A /* sound1.aif */; };
+		0D2AF7191D46737800287D3A /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AF7181D46737800287D3A /* AudioPlayer.swift */; };
+		0D2AF71B1D4674D700287D3A /* SetToneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AF71A1D4674D700287D3A /* SetToneViewController.swift */; };
+		0D2AF71D1D467F7300287D3A /* sound2.aif in Resources */ = {isa = PBXBuildFile; fileRef = 0D2AF71C1D467F7300287D3A /* sound2.aif */; };
+		0D2AF71F1D467FF100287D3A /* sound3.aif in Resources */ = {isa = PBXBuildFile; fileRef = 0D2AF71E1D467FF100287D3A /* sound3.aif */; };
+		0D2AF7211D46803100287D3A /* sound0.aif in Resources */ = {isa = PBXBuildFile; fileRef = 0D2AF7201D46803100287D3A /* sound0.aif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +86,12 @@
 		0D2AF70A1D43B7FC00287D3A /* PomodoroTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PomodoroTracker.swift; sourceTree = "<group>"; };
 		0D2AF70E1D43C14600287D3A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0D2AF7131D462D0100287D3A /* ExtensionsAndConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionsAndConstants.swift; sourceTree = "<group>"; };
-		0D2AF7161D4663BC00287D3A /* asdf.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = asdf.aif; sourceTree = "<group>"; };
+		0D2AF7161D4663BC00287D3A /* sound1.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound1.aif; sourceTree = "<group>"; };
+		0D2AF7181D46737800287D3A /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		0D2AF71A1D4674D700287D3A /* SetToneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetToneViewController.swift; sourceTree = "<group>"; };
+		0D2AF71C1D467F7300287D3A /* sound2.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound2.aif; sourceTree = "<group>"; };
+		0D2AF71E1D467FF100287D3A /* sound3.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound3.aif; sourceTree = "<group>"; };
+		0D2AF7201D46803100287D3A /* sound0.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound0.aif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,10 +148,15 @@
 		0D2AF6CA1D43B4C900287D3A /* doro */ = {
 			isa = PBXGroup;
 			children = (
-				0D2AF7161D4663BC00287D3A /* asdf.aif */,
+				0D2AF7161D4663BC00287D3A /* sound1.aif */,
+				0D2AF71C1D467F7300287D3A /* sound2.aif */,
+				0D2AF71E1D467FF100287D3A /* sound3.aif */,
+				0D2AF7201D46803100287D3A /* sound0.aif */,
 				0D2AF6CB1D43B4C900287D3A /* AppDelegate.swift */,
 				0D2AF6CD1D43B4C900287D3A /* ViewController.swift */,
 				0D2AF7081D43B6F100287D3A /* MainTimerViewController.swift */,
+				0D2AF71A1D4674D700287D3A /* SetToneViewController.swift */,
+				0D2AF7181D46737800287D3A /* AudioPlayer.swift */,
 				0D2AF7131D462D0100287D3A /* ExtensionsAndConstants.swift */,
 				0D2AF70A1D43B7FC00287D3A /* PomodoroTracker.swift */,
 				0D2AF6CF1D43B4C900287D3A /* Main.storyboard */,
@@ -277,10 +292,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D2AF7171D4663BC00287D3A /* asdf.aif in Resources */,
+				0D2AF71F1D467FF100287D3A /* sound3.aif in Resources */,
+				0D2AF71D1D467F7300287D3A /* sound2.aif in Resources */,
+				0D2AF7171D4663BC00287D3A /* sound1.aif in Resources */,
 				0D2AF6D61D43B4C900287D3A /* LaunchScreen.storyboard in Resources */,
 				0D2AF6D31D43B4C900287D3A /* Assets.xcassets in Resources */,
 				0D2AF6D11D43B4C900287D3A /* Main.storyboard in Resources */,
+				0D2AF7211D46803100287D3A /* sound0.aif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +347,8 @@
 				0D2AF7141D462D0100287D3A /* ExtensionsAndConstants.swift in Sources */,
 				0D2AF70F1D43C14600287D3A /* SettingsViewController.swift in Sources */,
 				0D2AF70B1D43B7FC00287D3A /* PomodoroTracker.swift in Sources */,
+				0D2AF7191D46737800287D3A /* AudioPlayer.swift in Sources */,
+				0D2AF71B1D4674D700287D3A /* SetToneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

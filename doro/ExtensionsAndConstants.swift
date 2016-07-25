@@ -26,3 +26,7 @@ func showAlert(title : String, message: String, presentingVC: UIViewController) 
 func showFailureAlert(in presentingVC: UIViewController) {
 	showAlert("Whoops", message: "Looks Like you didn't respond in time. Pomodoro Failed", presentingVC: presentingVC)
 }
+
+var currentSoundName = "sound0.aif"
+
+let toneNames = [1,2,3,4].map{return "sound\($0)"}

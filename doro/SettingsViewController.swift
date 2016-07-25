@@ -28,6 +28,7 @@ class SettingsViewController: UIViewController {
 	@IBOutlet weak var breakTimePicker: UIDatePicker!
     override func viewDidLoad() {
         super.viewDidLoad()
+		//TODO: Make white should be a global function
 		workTimePicker.setValue(UIColor.whiteColor(), forKey: "textColor")
 		breakTimePicker.setValue(UIColor.whiteColor(), forKey: "textColor")
 	workTimePicker.performSelector(Selector("setHighlightsToday:"), withObject:UIColor.whiteColor())

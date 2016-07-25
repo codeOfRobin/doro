@@ -22,10 +22,13 @@ class MainTimerViewController: UIViewController, PomodoroTrackerDelegate {
 	
 	override func viewWillAppear(animated: Bool) {
 		super.viewWillAppear(animated)
+		if PomodoroTracker.sharedPomodoroTracker.state == .HasntStarted {
+			timeLeft.text = PomodoroTracker.sharedPomodoroTracker.prettyPrintedTimeLeft
+		}
 	}
 	
 	
-	
+	// TODO: Put all the gradient colors etc in the constants folder
 	func pomodoroDidChangeState() {
 		
 		switch PomodoroTracker.sharedPomodoroTracker.state {
@@ -36,7 +39,7 @@ class MainTimerViewController: UIViewController, PomodoroTrackerDelegate {
 			statusLabel.text = "Start Working?"
 			
 		case .Waiting:
-			mySound?.play()
+			AudioPlayer.sharedSoundPlayer.playSound()
 			grad.colors = [UIColor(red:0.88, green:0.38, blue:0.06, alpha:1.00).CGColor, UIColor(red:0.89, green:0.96, blue:0.08, alpha:1.00).CGColor, ]
 			statusLabel.text = "Tap the button to continue"
 			statusLabel.numberOfLines = 0
@@ -81,7 +84,7 @@ class MainTimerViewController: UIViewController, PomodoroTrackerDelegate {
 		case .Break:
 			PomodoroTracker.sharedPomodoroTracker.abandonPomodoro()
 		case .Waiting:
-			mySound?.stop()
+			AudioPlayer.sharedSoundPlayer.stopSound()
 			if PomodoroTracker.sharedPomodoroTracker.prevState == .Work {
 				PomodoroTracker.sharedPomodoroTracker.startbreak()
 			}
@@ -102,6 +105,7 @@ class MainTimerViewController: UIViewController, PomodoroTrackerDelegate {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// TODO: Put all styling code into one function
+		AudioPlayer.sharedSoundPlayer.setSound("sound1")
 		primaryButton.contentEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
 		primaryButton.layer.cornerRadius = 10
 		primaryButton.sizeToFit()
@@ -111,24 +115,6 @@ class MainTimerViewController: UIViewController, PomodoroTrackerDelegate {
 		view.layer.insertSublayer(grad, atIndex: 0)
 		PomodoroTracker.sharedPomodoroTracker.delegate = self
 		timeLeft.text = PomodoroTracker.sharedPomodoroTracker.prettyPrintedTimeLeft
-		
-		if let sound = self.setupAudioPlayerWithFile("asdf", type: "aif") {
-			self.mySound = sound
-		}
 		// Do any additional setup after loading the view.
-	}
-	
-	var mySound: AVAudioPlayer?
-
-	func setupAudioPlayerWithFile(file: NSString, type: NSString) -> AVAudioPlayer? {
-		let path = NSBundle.mainBundle().pathForResource(file as String, ofType: type as String)
-		let url = NSURL.fileURLWithPath(path!)
-		var audioPlayer: AVAudioPlayer?
-		do {
-			try audioPlayer = AVAudioPlayer(contentsOfURL: url)
-		} catch {
-			print("Player not available")
-		}
-		return audioPlayer
 	}
 }

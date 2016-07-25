@@ -1,4 +1,5 @@
 Credit to https://thenounproject.com/mikkimikki for the settings icon
+Credit to https://thenounproject.com/jardson/ for the music icon
 
 TODO :
 - [ ] Send message to all VCs to dismiss once timer finishes so user can affirm
