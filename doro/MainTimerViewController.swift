@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MainTimerViewController: UIViewController, PomodoroTrackerDelegate {
 	
@@ -21,9 +22,9 @@ class MainTimerViewController: UIViewController, PomodoroTrackerDelegate {
 	
 	override func viewWillAppear(animated: Bool) {
 		super.viewWillAppear(animated)
-		PomodoroTracker.sharedPomodoroTracker.delegate = self
-		timeLeft.text = PomodoroTracker.sharedPomodoroTracker.prettyPrintedTimeLeft
 	}
+	
+	
 	
 	func pomodoroDidChangeState() {
 		
@@ -35,6 +36,7 @@ class MainTimerViewController: UIViewController, PomodoroTrackerDelegate {
 			statusLabel.text = "Start Working?"
 			
 		case .Waiting:
+			mySound?.play()
 			grad.colors = [UIColor(red:0.88, green:0.38, blue:0.06, alpha:1.00).CGColor, UIColor(red:0.89, green:0.96, blue:0.08, alpha:1.00).CGColor, ]
 			statusLabel.text = "Tap the button to continue"
 			statusLabel.numberOfLines = 0
@@ -42,8 +44,8 @@ class MainTimerViewController: UIViewController, PomodoroTrackerDelegate {
 			primaryButton.setTitle("Move to next Stage", forState: UIControlState.Normal)
 			NSNotificationCenter.defaultCenter().addObserverForName("pomodoroFailed", object: nil, queue: nil, usingBlock: { (notification) in
 				PomodoroTracker.sharedPomodoroTracker.reinitPomodoro()
-				showAlert("Whoops", message: "Looks Like you didn't respond in time. Pomodoro Failed", presentingVC: self)
-				// TODO: FAILURE CODE HERE
+				showFailureAlert(in: self)
+				PomodoroTracker.sharedPomodoroTracker.abandonPomodoro()
 			})
 			
 		case .Break:
@@ -62,31 +64,29 @@ class MainTimerViewController: UIViewController, PomodoroTrackerDelegate {
 				PomodoroTracker.sharedPomodoroTracker.startWaiting()
 			})
 		default:
-			print("Not covered yet")
+			print("Success or failure state. Nothign to do here.")
 		}
 		
 		let updateTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(MainTimerViewController.updateFunction(_:)), userInfo: nil, repeats: true)
 		NSRunLoop.currentRunLoop().addTimer(updateTimer, forMode: NSRunLoopCommonModes)
 	}
 	
+	
 	@IBAction func mainButtonTapped(sender: UIButton) {
 		switch PomodoroTracker.sharedPomodoroTracker.state {
 		case .HasntStarted:
 			PomodoroTracker.sharedPomodoroTracker.startWork()
 		case .Work:
-			// TODO: Abandon function
-			PomodoroTracker.sharedPomodoroTracker.reinitPomodoro()
+			PomodoroTracker.sharedPomodoroTracker.abandonPomodoro()
 		case .Break:
-			// TODO: Abandon function
-			PomodoroTracker.sharedPomodoroTracker.reinitPomodoro()
+			PomodoroTracker.sharedPomodoroTracker.abandonPomodoro()
 		case .Waiting:
+			mySound?.stop()
 			if PomodoroTracker.sharedPomodoroTracker.prevState == .Work {
 				PomodoroTracker.sharedPomodoroTracker.startbreak()
 			}
 			else {
-				// SAVE TO DB HERE.
-				// TODO: SUCCESS CODE
-//				PomodoroTracker.sharedPomodoroTracker.saveToDB()
+				PomodoroTracker.sharedPomodoroTracker.successfulPomodoro()
 			}
 		case .Success:
 			fatalError("A failure state is transient")
@@ -101,26 +101,34 @@ class MainTimerViewController: UIViewController, PomodoroTrackerDelegate {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		// TODO: Put all styling code into one function
+		primaryButton.contentEdgeInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+		primaryButton.layer.cornerRadius = 10
+		primaryButton.sizeToFit()
 		grad.frame = view.frame
 		grad.colors = [UIColor(red:0.06, green:0.47, blue:0.88, alpha:1.00).CGColor, UIColor(red:0.16, green:0.78, blue:0.24, alpha:1.00).CGColor]
 		grad.startPoint = CGPointMake(0.5, 0.4)
 		view.layer.insertSublayer(grad, atIndex: 0)
+		PomodoroTracker.sharedPomodoroTracker.delegate = self
+		timeLeft.text = PomodoroTracker.sharedPomodoroTracker.prettyPrintedTimeLeft
+		
+		if let sound = self.setupAudioPlayerWithFile("asdf", type: "aif") {
+			self.mySound = sound
+		}
 		// Do any additional setup after loading the view.
 	}
 	
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
+	var mySound: AVAudioPlayer?
+
+	func setupAudioPlayerWithFile(file: NSString, type: NSString) -> AVAudioPlayer? {
+		let path = NSBundle.mainBundle().pathForResource(file as String, ofType: type as String)
+		let url = NSURL.fileURLWithPath(path!)
+		var audioPlayer: AVAudioPlayer?
+		do {
+			try audioPlayer = AVAudioPlayer(contentsOfURL: url)
+		} catch {
+			print("Player not available")
+		}
+		return audioPlayer
 	}
-	
-	/*
-	// MARK: - Navigation
-	
-	// In a storyboard-based application, you will often want to do a little preparation before navigation
-	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-	// Get the new view controller using segue.destinationViewController.
-	// Pass the selected object to the new view controller.
-	}
-	*/
-	
 }

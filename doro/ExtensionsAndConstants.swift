@@ -22,3 +22,7 @@ func showAlert(title : String, message: String, presentingVC: UIViewController) 
 	alert.addAction(ok)
 	presentingVC.presentViewController(alert, animated: true, completion: nil)
 }
+
+func showFailureAlert(in presentingVC: UIViewController) {
+	showAlert("Whoops", message: "Looks Like you didn't respond in time. Pomodoro Failed", presentingVC: presentingVC)
+}

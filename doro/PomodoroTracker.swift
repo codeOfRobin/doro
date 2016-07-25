@@ -29,6 +29,7 @@ class PomodoroTracker: Object{
 			delegate?.pomodoroDidChangeState()
 		}
 	}
+	var wasSuccessfulOnDBSave = false
 	
 	var prevState: PomodoroState?
 	
@@ -129,29 +130,27 @@ class PomodoroTracker: Object{
 		breakTimeInterval = NSUserDefaults.standardUserDefaults().valueForKey("breakTimeInterval") as? NSTimeInterval ?? NSTimeInterval(integerLiteral: 5*60)
 	}
 	
-	func waitingStateTransition() {
-		state = .Waiting
-		startWaiting()
+	func successfulPomodoro() {
+		UIApplication.sharedApplication().cancelAllLocalNotifications()
+		state = .Success
+		wasSuccessfulOnDBSave = true
+		saveToDB()
+		// FIXME: turn this into start work thing.
+		reinitPomodoro()
 	}
 	
-	func affirmativeTransition() {
-		if prevState == .Work {
-			state = .Break
-			startbreak()
-		}
-		else if prevState == .Break {
-			state = .Work
-			startWork()
-		}
-		else {
-			fatalError("You're not supposed to do an affirmativeTransition() from a non work or non Break state")
-		}
+	func abandonPomodoro() {
+		UIApplication.sharedApplication().cancelAllLocalNotifications()
+		state = .Failure
+		wasSuccessfulOnDBSave = false
+		saveToDB()
 	}
 	
 	func saveToDB() {
 		let realm = try! Realm()
 		try! realm.write {
 			realm.add(self)
+			reinitPomodoro()
 		}
 	}
 }
