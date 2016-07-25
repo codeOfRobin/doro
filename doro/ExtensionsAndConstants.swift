@@ -29,4 +29,4 @@ func showFailureAlert(in presentingVC: UIViewController) {
 
 var currentSoundName = "sound0.aif"
 
-let toneNames = [1,2,3,4].map{return "sound\($0)"}
+let toneNames = [0,1,2,3].map{return "sound\($0)"}

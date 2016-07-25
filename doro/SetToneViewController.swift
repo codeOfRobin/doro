@@ -40,6 +40,7 @@ class SetToneViewController: UIViewController, UIPickerViewDataSource, UIPickerV
 	@IBAction func saveSound(sender: AnyObject) {
 		AudioPlayer.sharedSoundPlayer.stopSound()
 		currentSoundName = toneNames[songPickerView.selectedRowInComponent(0)]
+		AudioPlayer.sharedSoundPlayer.setSound(currentSoundName)
 		self.dismissViewControllerAnimated(true) { 
 			
 		}
