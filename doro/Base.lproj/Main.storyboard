@@ -39,13 +39,29 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Working?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NIN-nG-BkO">
+                                <rect key="frame" x="20" y="203" width="560" height="43"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="td1-S1-eK6">
-                                <rect key="frame" x="237" y="535" width="126" height="45"/>
+                                <rect key="frame" x="268" y="535" width="64" height="45"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="172" id="hfZ-NF-YY7"/>
+                                    <constraint firstAttribute="height" constant="57" id="xoX-4E-3A9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <state key="normal" title="Start Work"/>
+                                <state key="normal" title="Start "/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="hfZ-NF-YY7"/>
+                                        <exclude reference="xoX-4E-3A9"/>
+                                    </mask>
+                                </variation>
                                 <connections>
-                                    <action selector="startWorkPeriod:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BE5-dz-xUg"/>
+                                    <action selector="mainButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E2D-cN-pqj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -54,12 +70,23 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="td1-S1-eK6" secondAttribute="bottom" constant="20" id="0Fb-XL-T2g"/>
                             <constraint firstItem="qeF-J7-YcW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="2ir-Mc-n8H"/>
                             <constraint firstItem="DwW-HR-oYv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MFb-cM-AYW"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="NIN-nG-BkO" secondAttribute="leading" id="Ziy-oR-VNQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NIN-nG-BkO" secondAttribute="trailing" id="b4c-iq-0n9"/>
+                            <constraint firstItem="NIN-nG-BkO" firstAttribute="top" secondItem="DwW-HR-oYv" secondAttribute="bottom" constant="27" id="dZD-qJ-Ucd"/>
                             <constraint firstItem="qeF-J7-YcW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="fjX-iP-kUK"/>
+                            <constraint firstItem="NIN-nG-BkO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kK2-vt-U0m"/>
                             <constraint firstItem="DwW-HR-oYv" firstAttribute="top" secondItem="qeF-J7-YcW" secondAttribute="bottom" constant="40" id="ngr-ax-cms"/>
                             <constraint firstItem="td1-S1-eK6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zLG-6L-KDL"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="kK2-vt-U0m"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="primaryButton" destination="td1-S1-eK6" id="le2-s2-Fru"/>
+                        <outlet property="statusLabel" destination="NIN-nG-BkO" id="wZr-zQ-6wh"/>
                         <outlet property="timeLeft" destination="DwW-HR-oYv" id="pjx-O6-ggf"/>
                     </connections>
                 </viewController>

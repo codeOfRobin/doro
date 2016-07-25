@@ -23,6 +23,7 @@
 		0D2AF7091D43B6F100287D3A /* MainTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AF7081D43B6F100287D3A /* MainTimerViewController.swift */; };
 		0D2AF70B1D43B7FC00287D3A /* PomodoroTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AF70A1D43B7FC00287D3A /* PomodoroTracker.swift */; };
 		0D2AF70F1D43C14600287D3A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AF70E1D43C14600287D3A /* SettingsViewController.swift */; };
+		0D2AF7141D462D0100287D3A /* ExtensionsAndConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AF7131D462D0100287D3A /* ExtensionsAndConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		0D2AF7081D43B6F100287D3A /* MainTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTimerViewController.swift; sourceTree = "<group>"; };
 		0D2AF70A1D43B7FC00287D3A /* PomodoroTracker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PomodoroTracker.swift; sourceTree = "<group>"; };
 		0D2AF70E1D43C14600287D3A /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0D2AF7131D462D0100287D3A /* ExtensionsAndConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionsAndConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				0D2AF6CB1D43B4C900287D3A /* AppDelegate.swift */,
 				0D2AF6CD1D43B4C900287D3A /* ViewController.swift */,
 				0D2AF7081D43B6F100287D3A /* MainTimerViewController.swift */,
+				0D2AF7131D462D0100287D3A /* ExtensionsAndConstants.swift */,
 				0D2AF70A1D43B7FC00287D3A /* PomodoroTracker.swift */,
 				0D2AF6CF1D43B4C900287D3A /* Main.storyboard */,
 				0D2AF70E1D43C14600287D3A /* SettingsViewController.swift */,
@@ -319,6 +322,7 @@
 				0D2AF7091D43B6F100287D3A /* MainTimerViewController.swift in Sources */,
 				0D2AF6CE1D43B4C900287D3A /* ViewController.swift in Sources */,
 				0D2AF6CC1D43B4C900287D3A /* AppDelegate.swift in Sources */,
+				0D2AF7141D462D0100287D3A /* ExtensionsAndConstants.swift in Sources */,
 				0D2AF70F1D43C14600287D3A /* SettingsViewController.swift in Sources */,
 				0D2AF70B1D43B7FC00287D3A /* PomodoroTracker.swift in Sources */,
 			);
@@ -555,6 +559,7 @@
 				0D2AF6F21D43B4C900287D3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D2AF6F31D43B4C900287D3A /* Build configuration list for PBXNativeTarget "doroTests" */ = {
 			isa = XCConfigurationList;
@@ -563,6 +568,7 @@
 				0D2AF6F51D43B4C900287D3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0D2AF6F61D43B4C900287D3A /* Build configuration list for PBXNativeTarget "doroUITests" */ = {
 			isa = XCConfigurationList;
@@ -571,6 +577,7 @@
 				0D2AF6F81D43B4C900287D3A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

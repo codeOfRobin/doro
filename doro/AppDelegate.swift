@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+		UIApplication.sharedApplication().cancelAllLocalNotifications()
 		// Override point for customization after application launch.
 		let settingsRequest = UIUserNotificationSettings(forTypes: [.Alert, .Sound, .Badge], categories: nil)
 		UIApplication.sharedApplication().registerUserNotificationSettings(settingsRequest)
@@ -46,6 +47,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
 		
 		if application.applicationState == .Active {
+			if let userInfo = notification.userInfo, let broadcastName = userInfo["broadcastName"] as? String {
+				NSNotificationCenter.defaultCenter().postNotificationName(broadcastName, object: nil)
+			}
 		}
 	}
 
