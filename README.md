@@ -4,7 +4,7 @@ Jared Sinclair recently announced his new podcast app, called 'sodes.
 
 https://twitter.com/jaredsinclair/status/756480795586375680
 
-This announcement was very well received in the iOS ecosystem (there's already a great set of podcast apps like Pocket Casts and Marco Arment's Overcast and this announcement, will no doubt add to this vibrant ecosystem)
+This announcement was very well received in the iOS community (there's already a set of great podcast apps like Pocket Casts and Marco Arment's Overcast, so this will no doubt add to the vibrant podcasting ecosystem on  platforms)
 
 So, Inspired from (epi)sodes. Here's 'doro the pomodoro app.
 
@@ -21,7 +21,7 @@ The first problem I tackled was the model layer of the app - the Pomodoro tracke
 ![ Obligatory post from NSHipster: http://nshipster.com/nsnotification-and-nsnotificationcenter ](https://i.imgur.com/a/80nxz)
 https://i.imgur.com/a/80nxz because sometimes github READMEs suck at loading images
 
-Pomodoros depend on user input to work properly (There's no way to know if your user's dozing off when (s)he's supposed to be working or Programming hard during a break period. So, a Pomodoro can exist in the following states: 
+Pomodoros depend on user input to work properly (There's no way to know if your user's dozing off when he/she's supposed to be working or Programming hard during a break period. So, a Pomodoro can exist in the following states: 
 
 - **HasntStarted** - an init state before the user starts a session
 - **Work** - during a work period
@@ -30,7 +30,7 @@ Pomodoros depend on user input to work properly (There's no way to know if your 
 - **Success** - a successful pomodoro cycle
 - **Failure** - an abandoned cycle. Default back to HasntStarted
 
-The pomodoro class contains methods that can trigger state transitions ( for example, a user pressing a button, or a timer running out). It also contains a swift computed property that external views can refer to do get the current time left.
+The pomodoro class contains methods that can trigger state transitions (for example, a user pressing a button, or a timer running out). It also contains a swift computed property that external views can refer to do get the current time left.
 
 Now that the hard part is over, let's move on to the easy stuff.
 
@@ -86,7 +86,7 @@ I'm using [swiftlint](https://github.com/realm/SwiftLint) by realm, with stricte
 I'm using [jazzy](https://github.com/realm/jazzy/) by (surprise) Realm, which is neat because it works using the `xcodebuild` command line tool and generates docs exactly like Apple's. No seriously, check out the `docs` folder.
 
 # Unit Tests
-I've written [Unit tests](https://github.com/codeOfRobin/howToThinkLikeAComputerScientist) in other languages before, but not a lot in Swift. So I decide to hit up Treehouse and see how [Unit Testing in iOS](https://teamtreehouse.com/library/unit-testing-in-ios-2) worked (There's also the great lecture by Realm in one of the links above). 
+I've written [Unit tests in other languages before]](https://github.com/codeOfRobin/howToThinkLikeAComputerScientist), but not a lot in Swift. So I decide to hit up Treehouse and see how [Unit Testing in iOS](https://teamtreehouse.com/library/unit-testing-in-ios-2) worked (There's also the great lecture by Realm in one of the links above). 
 
 Swift, being a statically typed language eliminates huge common classes of errors you'd normally see in, say Javascript or Python. It also has unique features like optionals to prevent common runtime errors (like `indexOutOfRange` or `Nil` errors), so that removes a lot of Unit Tests I'd normally have to write (no point writing an `AssertNil()` if the compiler can guarantee the nil state of an object or an `AssertType()` if the types of objects are known at compile time). That leaves other cases like preventing regressions when someone else edits your code, so I've written a tiny unit test to make sure my `timeLeft` stored property returns the right values.
 
