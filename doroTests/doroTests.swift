@@ -24,6 +24,10 @@ class DoroTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+		PomodoroTracker.sharedPomodoroTracker.workStartTime = NSDate()
+		PomodoroTracker.sharedPomodoroTracker.workTimeInterval = NSTimeInterval(30)
+		PomodoroTracker.sharedPomodoroTracker.state = .Work
+		XCTAssert(PomodoroTracker.sharedPomodoroTracker.timeLeft == 30)
     }
 
     func testPerformanceExample() {
