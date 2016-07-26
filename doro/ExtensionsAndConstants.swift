@@ -30,3 +30,10 @@ func showFailureAlert(in presentingVC: UIViewController) {
 var currentSoundName = "sound0.aif"
 
 let toneNames = [0,1,2,3].map{return "sound\($0)"}
+
+extension Array {
+	func randomItem() -> Element {
+		let index = Int(arc4random_uniform(UInt32(self.count)))
+		return self[index]
+	}
+}

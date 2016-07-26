@@ -8,56 +8,50 @@
 
 import UIKit
 import SwiftCharts
+import Realm
+import RealmSwift
 
 class ChartViewController: UIViewController {
 
 	private var chart: Chart? // arc
+	// http://stackoverflow.com/questions/24007461/how-to-enumerate-an-enum-with-string-type
+	enum DaysOfWeek: String {
+		case Monday = "M",
+		Tuesday = "T",
+		Wednesday = "W",
+		Thursday = "Th",
+		Friday = "Fr"
+		
+		static let allValues = [Monday, Tuesday, Wednesday, Thursday, Friday]
+	}
+	
+	//NOTE: I _might_ have prematurely tried to be cute here. But alteast I have type safety ¯\_(ツ)_/¯
+	var chartData:[DaysOfWeek:(Int,Int)] = [:]
+	
+	let arr = []
 	
 	private func generateChart() -> Chart {
-		let color0 = UIColor.grayColor().colorWithAlphaComponent(0.6)
-		let color1 = UIColor.blueColor().colorWithAlphaComponent(0.6)
-		let color2 = UIColor.redColor().colorWithAlphaComponent(0.6)
-		let color3 = UIColor.greenColor().colorWithAlphaComponent(0.6)
+		let successColor = UIColor.blueColor().colorWithAlphaComponent(0.6)
+		let failureColor = UIColor.redColor().colorWithAlphaComponent(0.6)
 		
 		let zero = ChartAxisValueDouble(0)
 		
 		let labelSettings = ChartLabelSettings(font:  UIFont.systemFontOfSize(12))
 		
-		let barModels = [
-			ChartStackedBarModel(constant: ChartAxisValueString("M", order: 1, labelSettings: labelSettings), start: zero, items: [
-				ChartStackedBarItemModel(quantity: 20, bgColor: color0),
-				ChartStackedBarItemModel(quantity: 60, bgColor: color1),
-				ChartStackedBarItemModel(quantity: 30, bgColor: color2),
-				ChartStackedBarItemModel(quantity: 20, bgColor: color3)
-				]),
-			ChartStackedBarModel(constant: ChartAxisValueString("T", order: 2, labelSettings: labelSettings), start: zero, items: [
-				ChartStackedBarItemModel(quantity: 40, bgColor: color0),
-				ChartStackedBarItemModel(quantity: 30, bgColor: color1),
-				ChartStackedBarItemModel(quantity: 10, bgColor: color2),
-				ChartStackedBarItemModel(quantity: 30, bgColor: color3)
-				]),
-			ChartStackedBarModel(constant: ChartAxisValueString("W", order: 3, labelSettings: labelSettings), start: zero, items: [
-				ChartStackedBarItemModel(quantity: 30, bgColor: color0),
-				ChartStackedBarItemModel(quantity: 50, bgColor: color1),
-				ChartStackedBarItemModel(quantity: 20, bgColor: color2),
-				ChartStackedBarItemModel(quantity: 10, bgColor: color3)
-				]),
-			ChartStackedBarModel(constant: ChartAxisValueString("Th", order: 4, labelSettings: labelSettings), start: zero, items: [
-				ChartStackedBarItemModel(quantity: 10, bgColor: color0),
-				ChartStackedBarItemModel(quantity: 30, bgColor: color1),
-				ChartStackedBarItemModel(quantity: 50, bgColor: color2),
-				ChartStackedBarItemModel(quantity: 5, bgColor: color3)
-				]),
-			ChartStackedBarModel(constant: ChartAxisValueString("F", order: 5, labelSettings: labelSettings), start: zero, items: [
-				ChartStackedBarItemModel(quantity: 10, bgColor: color0),
-				ChartStackedBarItemModel(quantity: 30, bgColor: color1),
-				ChartStackedBarItemModel(quantity: 50, bgColor: color2),
-				ChartStackedBarItemModel(quantity: 5, bgColor: color3)
-				])
-		]
+		let barModels = DaysOfWeek.allValues.enumerate().map { (index,day) -> ChartStackedBarModel  in
+			// TODO: Un force unwrap
+			let success = Double(chartData[day]!.0)
+			let failure = Double(chartData[day]!.1)
+			let items = [
+				ChartStackedBarItemModel(quantity: success , bgColor: successColor),
+				ChartStackedBarItemModel(quantity: failure, bgColor: failureColor),
+			]
+			return ChartStackedBarModel(constant: ChartAxisValueString(day.rawValue,order: index + 1, labelSettings: labelSettings), start: zero, items: items)
+		}
 		
+	
 		let (yValues, xValues) = (
-			0.stride(through: 150, by: 20).map {ChartAxisValueDouble(Double($0), labelSettings: labelSettings)},
+			0.stride(through: 20, by: 1).map {ChartAxisValueDouble(Double($0), labelSettings: labelSettings)},
 			[ChartAxisValueString("", order: 0, labelSettings: labelSettings)] + barModels.map{$0.constant} + [ChartAxisValueString("", order: 5, labelSettings: labelSettings)]
 		)
 		
@@ -70,7 +64,7 @@ class ChartViewController: UIViewController {
 		
 		let (xAxis, yAxis, innerFrame) = (coordsSpace.xAxis, coordsSpace.yAxis, coordsSpace.chartInnerFrame)
 		let chartStackedBarsLayer = ChartStackedBarsLayer(xAxis: xAxis, yAxis: yAxis, innerFrame: innerFrame, barModels: barModels, horizontal: false, barWidth: 40, animDuration: 2)
-		let settings = ChartGuideLinesDottedLayerSettings(linesColor: UIColor.whiteColor(), linesWidth: 0.1)
+		let settings = ChartGuideLinesDottedLayerSettings(linesColor: UIColor.blackColor(), linesWidth: 0.1)
 		let guidelinesLayer = ChartGuideLinesDottedLayer(xAxis: xAxis, yAxis: yAxis, innerFrame: innerFrame, settings: settings)
 		return Chart(
 			frame: frame,
@@ -99,11 +93,31 @@ class ChartViewController: UIViewController {
 		chartSettings.spacingBetweenAxesY = 8
 		return chartSettings
 	}
+	
+	func generateData() {
+		let realm = try! Realm()
+		let calendar = NSCalendar.currentCalendar()
+		let components = calendar.components([.Year, .WeekOfYear, .Weekday], fromDate: NSDate())
+		components.timeZone = NSTimeZone(name: "UTC")
+		for (index, day) in DaysOfWeek.allValues.enumerate() {
+			components.weekday = index + 2
+			let dayOfWeek = calendar.dateFromComponents(components)
+			components.weekday = index + 3
+			let nextDay = calendar.dateFromComponents(components)
+			let pomos = realm.objects(PomodoroTracker.self).filter("workStartTime BETWEEN {%@, %@}", dayOfWeek!, nextDay!)
+			let successes = pomos.filter("wasSuccessfulOnDBSave = 1")
+			let failures = pomos.filter("wasSuccessfulOnDBSave = 0")
+			chartData[day] = (successes.count, failures.count)
+		}
+	}
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		generateData()
 		self.chart?.clearView()
 		let chart = generateChart()
 		view.addSubview(chart.view)
 		self.chart = chart
+		
 	}
 }
