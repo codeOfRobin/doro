@@ -15,17 +15,18 @@ class SettingsViewController: UIViewController {
 		NSUserDefaults.standardUserDefaults().setValue(breakTimePicker.countDownDuration, forKey: "breakTimeInterval")
 		PomodoroTracker.sharedPomodoroTracker.workTimeInterval = workTimePicker.countDownDuration
 		PomodoroTracker.sharedPomodoroTracker.breakTimeInterval = workTimePicker.countDownDuration
-		self.dismissViewControllerAnimated(true) { 
+		self.dismissViewControllerAnimated(true) {
 		}
 	}
-	
+
 	@IBAction func cancelButton(sender: AnyObject) {
 		self.dismissViewControllerAnimated(true) {
 		}
 	}
-	
+
 	@IBOutlet weak var workTimePicker: UIDatePicker!
 	@IBOutlet weak var breakTimePicker: UIDatePicker!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 		//TODO: Make white should be a global function
@@ -44,16 +45,4 @@ class SettingsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

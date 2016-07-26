@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0D2AF6CC1D43B4C900287D3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AF6CB1D43B4C900287D3A /* AppDelegate.swift */; };
-		0D2AF6CE1D43B4C900287D3A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2AF6CD1D43B4C900287D3A /* ViewController.swift */; };
 		0D2AF6D11D43B4C900287D3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2AF6CF1D43B4C900287D3A /* Main.storyboard */; };
 		0D2AF6D31D43B4C900287D3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D2AF6D21D43B4C900287D3A /* Assets.xcassets */; };
 		0D2AF6D61D43B4C900287D3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2AF6D41D43B4C900287D3A /* LaunchScreen.storyboard */; };
@@ -31,6 +30,9 @@
 		0D2AF71F1D467FF100287D3A /* sound3.aif in Resources */ = {isa = PBXBuildFile; fileRef = 0D2AF71E1D467FF100287D3A /* sound3.aif */; };
 		0D2AF7211D46803100287D3A /* sound0.aif in Resources */ = {isa = PBXBuildFile; fileRef = 0D2AF7201D46803100287D3A /* sound0.aif */; };
 		0DB2BC591D468F6D005A56ED /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB2BC581D468F6D005A56ED /* ChartViewController.swift */; };
+		0DD2CB0A1D47954900914C6A /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2AF6F91D43B5FE00287D3A /* Realm.framework */; };
+		0DD2CB0B1D47954900914C6A /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2AF6FA1D43B5FE00287D3A /* RealmSwift.framework */; };
+		0DD2CB0C1D47954900914C6A /* SwiftCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D2AF6FB1D43B5FE00287D3A /* SwiftCharts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,17 +69,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0D2AF6C81D43B4C900287D3A /*  'doro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = " 'doro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D2AF6C81D43B4C900287D3A /* `doro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "`doro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D2AF6CB1D43B4C900287D3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0D2AF6CD1D43B4C900287D3A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0D2AF6D01D43B4C900287D3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0D2AF6D21D43B4C900287D3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D2AF6D51D43B4C900287D3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D2AF6D71D43B4C900287D3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0D2AF6DC1D43B4C900287D3A /* doroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = doroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D2AF6DC1D43B4C900287D3A /* DoroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D2AF6E01D43B4C900287D3A /* doroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doroTests.swift; sourceTree = "<group>"; };
 		0D2AF6E21D43B4C900287D3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0D2AF6E71D43B4C900287D3A /* doroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = doroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D2AF6E71D43B4C900287D3A /* DoroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DoroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D2AF6EB1D43B4C900287D3A /* doroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = doroUITests.swift; sourceTree = "<group>"; };
 		0D2AF6ED1D43B4C900287D3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D2AF6F91D43B5FE00287D3A /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
@@ -111,6 +112,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DD2CB0A1D47954900914C6A /* Realm.framework in Frameworks */,
+				0DD2CB0B1D47954900914C6A /* RealmSwift.framework in Frameworks */,
+				0DD2CB0C1D47954900914C6A /* SwiftCharts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,9 +144,9 @@
 		0D2AF6C91D43B4C900287D3A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0D2AF6C81D43B4C900287D3A /*  'doro.app */,
-				0D2AF6DC1D43B4C900287D3A /* doroTests.xctest */,
-				0D2AF6E71D43B4C900287D3A /* doroUITests.xctest */,
+				0D2AF6C81D43B4C900287D3A /* `doro.app */,
+				0D2AF6DC1D43B4C900287D3A /* DoroTests.xctest */,
+				0D2AF6E71D43B4C900287D3A /* DoroUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -155,7 +159,6 @@
 				0D2AF71E1D467FF100287D3A /* sound3.aif */,
 				0D2AF7201D46803100287D3A /* sound0.aif */,
 				0D2AF6CB1D43B4C900287D3A /* AppDelegate.swift */,
-				0D2AF6CD1D43B4C900287D3A /* ViewController.swift */,
 				0D2AF7081D43B6F100287D3A /* MainTimerViewController.swift */,
 				0D2AF71A1D4674D700287D3A /* SetToneViewController.swift */,
 				0D2AF7181D46737800287D3A /* AudioPlayer.swift */,
@@ -192,9 +195,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0D2AF6C71D43B4C900287D3A /*  'doro */ = {
+		0D2AF6C71D43B4C900287D3A /* doro */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0D2AF6F01D43B4C900287D3A /* Build configuration list for PBXNativeTarget " 'doro" */;
+			buildConfigurationList = 0D2AF6F01D43B4C900287D3A /* Build configuration list for PBXNativeTarget "doro" */;
 			buildPhases = (
 				0D2AF6C41D43B4C900287D3A /* Sources */,
 				0D2AF6C51D43B4C900287D3A /* Frameworks */,
@@ -206,32 +209,33 @@
 			);
 			dependencies = (
 			);
-			name = " 'doro";
+			name = doro;
 			productName = doro;
-			productReference = 0D2AF6C81D43B4C900287D3A /*  'doro.app */;
+			productReference = 0D2AF6C81D43B4C900287D3A /* `doro.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0D2AF6DB1D43B4C900287D3A /* doroTests */ = {
+		0D2AF6DB1D43B4C900287D3A /* DoroTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0D2AF6F31D43B4C900287D3A /* Build configuration list for PBXNativeTarget "doroTests" */;
+			buildConfigurationList = 0D2AF6F31D43B4C900287D3A /* Build configuration list for PBXNativeTarget "DoroTests" */;
 			buildPhases = (
 				0D2AF6D81D43B4C900287D3A /* Sources */,
 				0D2AF6D91D43B4C900287D3A /* Frameworks */,
 				0D2AF6DA1D43B4C900287D3A /* Resources */,
+				0DD2CB091D47943F00914C6A /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				0D2AF6DE1D43B4C900287D3A /* PBXTargetDependency */,
 			);
-			name = doroTests;
+			name = DoroTests;
 			productName = doroTests;
-			productReference = 0D2AF6DC1D43B4C900287D3A /* doroTests.xctest */;
+			productReference = 0D2AF6DC1D43B4C900287D3A /* DoroTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0D2AF6E61D43B4C900287D3A /* doroUITests */ = {
+		0D2AF6E61D43B4C900287D3A /* DoroUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0D2AF6F61D43B4C900287D3A /* Build configuration list for PBXNativeTarget "doroUITests" */;
+			buildConfigurationList = 0D2AF6F61D43B4C900287D3A /* Build configuration list for PBXNativeTarget "DoroUITests" */;
 			buildPhases = (
 				0D2AF6E31D43B4C900287D3A /* Sources */,
 				0D2AF6E41D43B4C900287D3A /* Frameworks */,
@@ -242,9 +246,9 @@
 			dependencies = (
 				0D2AF6E91D43B4C900287D3A /* PBXTargetDependency */,
 			);
-			name = doroUITests;
+			name = DoroUITests;
 			productName = doroUITests;
-			productReference = 0D2AF6E71D43B4C900287D3A /* doroUITests.xctest */;
+			productReference = 0D2AF6E71D43B4C900287D3A /* DoroUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -283,9 +287,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0D2AF6C71D43B4C900287D3A /*  'doro */,
-				0D2AF6DB1D43B4C900287D3A /* doroTests */,
-				0D2AF6E61D43B4C900287D3A /* doroUITests */,
+				0D2AF6C71D43B4C900287D3A /* doro */,
+				0D2AF6DB1D43B4C900287D3A /* DoroTests */,
+				0D2AF6E61D43B4C900287D3A /* DoroUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -337,6 +341,21 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
+		0DD2CB091D47943F00914C6A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -345,7 +364,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D2AF7091D43B6F100287D3A /* MainTimerViewController.swift in Sources */,
-				0D2AF6CE1D43B4C900287D3A /* ViewController.swift in Sources */,
 				0D2AF6CC1D43B4C900287D3A /* AppDelegate.swift in Sources */,
 				0D2AF7141D462D0100287D3A /* ExtensionsAndConstants.swift in Sources */,
 				0D2AF70F1D43C14600287D3A /* SettingsViewController.swift in Sources */,
@@ -377,12 +395,12 @@
 /* Begin PBXTargetDependency section */
 		0D2AF6DE1D43B4C900287D3A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0D2AF6C71D43B4C900287D3A /*  'doro */;
+			target = 0D2AF6C71D43B4C900287D3A /* doro */;
 			targetProxy = 0D2AF6DD1D43B4C900287D3A /* PBXContainerItemProxy */;
 		};
 		0D2AF6E91D43B4C900287D3A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0D2AF6C71D43B4C900287D3A /*  'doro */;
+			target = 0D2AF6C71D43B4C900287D3A /* doro */;
 			targetProxy = 0D2AF6E81D43B4C900287D3A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -503,7 +521,7 @@
 				INFOPLIST_FILE = doro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.comicsanshq.doro;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "`doro";
 			};
 			name = Debug;
 		};
@@ -518,7 +536,7 @@
 				INFOPLIST_FILE = doro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.comicsanshq.doro;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "`doro";
 			};
 			name = Release;
 		};
@@ -526,11 +544,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = doroTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.comicsanshq.doroTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/doro.app/doro";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/`doro.app/`doro";
 			};
 			name = Debug;
 		};
@@ -538,11 +560,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = doroTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.comicsanshq.doroTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/doro.app/doro";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/`doro.app/`doro";
 			};
 			name = Release;
 		};
@@ -580,7 +606,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0D2AF6F01D43B4C900287D3A /* Build configuration list for PBXNativeTarget " 'doro" */ = {
+		0D2AF6F01D43B4C900287D3A /* Build configuration list for PBXNativeTarget "doro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0D2AF6F11D43B4C900287D3A /* Debug */,
@@ -589,7 +615,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0D2AF6F31D43B4C900287D3A /* Build configuration list for PBXNativeTarget "doroTests" */ = {
+		0D2AF6F31D43B4C900287D3A /* Build configuration list for PBXNativeTarget "DoroTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0D2AF6F41D43B4C900287D3A /* Debug */,
@@ -598,7 +624,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0D2AF6F61D43B4C900287D3A /* Build configuration list for PBXNativeTarget "doroUITests" */ = {
+		0D2AF6F61D43B4C900287D3A /* Build configuration list for PBXNativeTarget "DoroUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0D2AF6F71D43B4C900287D3A /* Debug */,

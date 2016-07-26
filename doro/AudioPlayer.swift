@@ -16,9 +16,9 @@ class AudioPlayer: NSObject {
 			self.mySound = sound
 		}
 	}
-	
+
 	static let sharedSoundPlayer = AudioPlayer()
-	
+
 	func setupAudioPlayerWithFile(file: NSString, type: NSString) -> AVAudioPlayer? {
 		let path = NSBundle.mainBundle().pathForResource(file as String, ofType: type as String)
 		let url = NSURL.fileURLWithPath(path!)

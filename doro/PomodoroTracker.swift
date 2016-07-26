@@ -22,34 +22,33 @@ protocol PomodoroTrackerDelegate {
 	func pomodoroDidChangeState()
 }
 
-class PomodoroTracker: Object{
-	
+class PomodoroTracker: Object {
 	var state: PomodoroState = .HasntStarted {
 		didSet {
 			delegate?.pomodoroDidChangeState()
 		}
 	}
 	var wasSuccessfulOnDBSave = false
-	
+
 	var prevState: PomodoroState?
-	
+
 	// TODO: check if this can be a lazy var
 	var workStartTime = NSDate()
-	
+
 	var workTimeInterval = NSUserDefaults.standardUserDefaults().valueForKey("workTimeInterval") as? NSTimeInterval ?? NSTimeInterval(integerLiteral: 25*60)
-	
+
 	var breakStartTime = NSDate()
-	
+
 	var breakTimeInterval = NSUserDefaults.standardUserDefaults().valueForKey("breakTimeInterval") as? NSTimeInterval ?? NSTimeInterval(integerLiteral: 5*60)
-	
+
 	var waitingStartTime = NSDate()
-	
+
 	let waitingTimeInterval = NSTimeInterval(30)
-	
+
 	var delegate: PomodoroTrackerDelegate?
-	
+
 	static let sharedPomodoroTracker = PomodoroTracker()
-	
+
 	var timeLeft: NSTimeInterval {
 		switch state {
 		case .Work:
@@ -68,7 +67,7 @@ class PomodoroTracker: Object{
 			return workTimeInterval
 		}
 	}
-	
+
 	var prettyPrintedTimeLeft: String {
 		if timeLeft < 0 {
 			return "00:00"
@@ -83,7 +82,7 @@ class PomodoroTracker: Object{
 		}
 		return "\(minutes):\(seconds)"
 	}
-	
+
 	func startWaiting() {
 		prevState = state
 		state = .Waiting
@@ -96,7 +95,7 @@ class PomodoroTracker: Object{
 		UIApplication.sharedApplication().cancelAllLocalNotifications()
 		UIApplication.sharedApplication().scheduleLocalNotification(notification)
 	}
-	
+
 	func startWork() {
 		state = .Work
 		workStartTime = NSDate()
@@ -108,7 +107,7 @@ class PomodoroTracker: Object{
 		UIApplication.sharedApplication().cancelAllLocalNotifications()
 		UIApplication.sharedApplication().scheduleLocalNotification(notification)
 	}
-	
+
 	func startbreak() {
 		state = .Break
 		breakStartTime = NSDate()
@@ -120,7 +119,7 @@ class PomodoroTracker: Object{
 		UIApplication.sharedApplication().cancelAllLocalNotifications()
 		UIApplication.sharedApplication().scheduleLocalNotification(notification)
 	}
-	
+
 	func reinitPomodoro() {
 		//TODO: DRY up this code and the property inits as well
 		state = .HasntStarted
@@ -129,7 +128,7 @@ class PomodoroTracker: Object{
 		breakStartTime = NSDate()
 		breakTimeInterval = NSUserDefaults.standardUserDefaults().valueForKey("breakTimeInterval") as? NSTimeInterval ?? NSTimeInterval(integerLiteral: 5*60)
 	}
-	
+
 	func successfulPomodoro() {
 		UIApplication.sharedApplication().cancelAllLocalNotifications()
 		state = .Success
@@ -138,14 +137,14 @@ class PomodoroTracker: Object{
 		// FIXME: turn this into start work thing.
 		reinitPomodoro()
 	}
-	
+
 	func abandonPomodoro() {
 		UIApplication.sharedApplication().cancelAllLocalNotifications()
 		state = .Failure
 		wasSuccessfulOnDBSave = false
 		saveToDB()
 	}
-	
+
 	func saveToDB() {
 		let realm = try! Realm()
 		try! realm.write {
@@ -154,4 +153,3 @@ class PomodoroTracker: Object{
 		}
 	}
 }
-

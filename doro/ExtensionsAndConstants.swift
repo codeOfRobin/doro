@@ -8,7 +8,7 @@
 
 import UIKit
 
-func showAlert(title : String, message: String, presentingVC: UIViewController) {
+func showAlert(title: String, message: String, presentingVC: UIViewController) {
 	let alert = UIAlertController(
 		title: title,
 		message: message,
@@ -29,7 +29,9 @@ func showFailureAlert(in presentingVC: UIViewController) {
 
 var currentSoundName = "sound0.aif"
 
-let toneNames = [0,1,2,3].map{return "sound\($0)"}
+let toneNames = [0, 1, 2, 3].map {
+	return "sound\($0)"
+}
 
 extension Array {
 	func randomItem() -> Element {

@@ -43,16 +43,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func applicationWillTerminate(application: UIApplication) {
 		// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 	}
-	
+
 	func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
-		
+		// FIXME: This appears to be a false positive triggered by an issue similar to https://github.com/realm/SwiftLint/issues/642 Note that this goes away if I change the second let to a var
 		if application.applicationState == .Active {
-			if let userInfo = notification.userInfo, let broadcastName = userInfo["broadcastName"] as? String {
-				NSNotificationCenter.defaultCenter().postNotificationName(broadcastName, object: nil)
+			guard let userInfo = notification.userInfo, let broadcastName = userInfo["broadcastName"] as? String else {
+				return
 			}
+			NSNotificationCenter.defaultCenter().postNotificationName(broadcastName, object: nil)
 		}
 	}
-
-
 }
-
