@@ -4,7 +4,7 @@ Jared Sinclair recently announced his new podcast app, called 'sodes.
 
 https://twitter.com/jaredsinclair/status/756480795586375680
 
-This announcement was very well received in the iOS ecosystem (there's already a great set of podcast apps like Pocket Casts and Marco Arment's Overcast and this announcement, will no add to this vibrant ecosystem)
+This announcement was very well received in the iOS ecosystem (there's already a great set of podcast apps like Pocket Casts and Marco Arment's Overcast and this announcement, will no doubt add to this vibrant ecosystem)
 
 So, Inspired from (epi)sodes. Here's 'doro the pomodoro app.
 
@@ -18,7 +18,7 @@ Feature set I started out with (neither exhaustive nor aimed at - this is basica
 
 The first problem I tackled was the model layer of the app - the Pomodoro tracker. All the functions related to the *pomodoro* needed to be here. The PomodoroTracker would then send *messages* to the rest of the system regarding the change in its state. This would be done using a delegation pattern (like in the MainTimerViewController) or through an NSNotification broadcast.
 
-![ Obligatory post from NSHipster: http://nshipster.com/nsnotification-and-nsnotificationcenter ](http://i.imgur.com/a/80nxz)
+![ Obligatory post from NSHipster: http://nshipster.com/nsnotification-and-nsnotificationcenter ](https://i.imgur.com/a/80nxz)
 
 Pomodoros depend on user input to work properly (There's no way to know if your user's dozing off when (s)he's supposed to be working or Programming hard during a break period. So, a Pomodoro can exist in the following states: 
 
