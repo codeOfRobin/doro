@@ -30,6 +30,7 @@
 		0D2AF71D1D467F7300287D3A /* sound2.aif in Resources */ = {isa = PBXBuildFile; fileRef = 0D2AF71C1D467F7300287D3A /* sound2.aif */; };
 		0D2AF71F1D467FF100287D3A /* sound3.aif in Resources */ = {isa = PBXBuildFile; fileRef = 0D2AF71E1D467FF100287D3A /* sound3.aif */; };
 		0D2AF7211D46803100287D3A /* sound0.aif in Resources */ = {isa = PBXBuildFile; fileRef = 0D2AF7201D46803100287D3A /* sound0.aif */; };
+		0DB2BC591D468F6D005A56ED /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB2BC581D468F6D005A56ED /* ChartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		0D2AF71C1D467F7300287D3A /* sound2.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound2.aif; sourceTree = "<group>"; };
 		0D2AF71E1D467FF100287D3A /* sound3.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound3.aif; sourceTree = "<group>"; };
 		0D2AF7201D46803100287D3A /* sound0.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound0.aif; sourceTree = "<group>"; };
+		0DB2BC581D468F6D005A56ED /* ChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 				0D2AF7131D462D0100287D3A /* ExtensionsAndConstants.swift */,
 				0D2AF70A1D43B7FC00287D3A /* PomodoroTracker.swift */,
 				0D2AF6CF1D43B4C900287D3A /* Main.storyboard */,
+				0DB2BC581D468F6D005A56ED /* ChartViewController.swift */,
 				0D2AF70E1D43C14600287D3A /* SettingsViewController.swift */,
 				0D2AF6D21D43B4C900287D3A /* Assets.xcassets */,
 				0D2AF6D41D43B4C900287D3A /* LaunchScreen.storyboard */,
@@ -346,6 +349,7 @@
 				0D2AF6CC1D43B4C900287D3A /* AppDelegate.swift in Sources */,
 				0D2AF7141D462D0100287D3A /* ExtensionsAndConstants.swift in Sources */,
 				0D2AF70F1D43C14600287D3A /* SettingsViewController.swift in Sources */,
+				0DB2BC591D468F6D005A56ED /* ChartViewController.swift in Sources */,
 				0D2AF70B1D43B7FC00287D3A /* PomodoroTracker.swift in Sources */,
 				0D2AF7191D46737800287D3A /* AudioPlayer.swift in Sources */,
 				0D2AF71B1D4674D700287D3A /* SetToneViewController.swift in Sources */,
