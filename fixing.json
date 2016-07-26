@@ -1,0 +1,1037 @@
+[
+  {
+    "reason" : "Files should have a single trailing newline.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/AppDelegate.swift",
+    "rule_id" : "trailing_newline",
+    "line" : 58,
+    "severity" : "Warning",
+    "type" : "Trailing Newline"
+  },
+  {
+    "reason" : "Repeated `let` statements in conditional binding cascade should be avoided.",
+    "character" : 45,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/AppDelegate.swift",
+    "rule_id" : "conditional_binding_cascade",
+    "line" : 50,
+    "severity" : "Warning",
+    "type" : "Conditional Binding Cascade"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/AppDelegate.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 46,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/AppDelegate.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 48,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/AudioPlayer.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 19,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/AudioPlayer.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 21,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Opening braces should be preceded by a single space and on the same line as the declaration.",
+    "character" : 85,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "opening_brace",
+    "line" : 55,
+    "severity" : "Warning",
+    "type" : "Opening Brace Spacing"
+  },
+  {
+    "reason" : "There should be no space before and one after any comma.",
+    "character" : 32,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "comma",
+    "line" : 29,
+    "severity" : "Warning",
+    "type" : "Comma Spacing"
+  },
+  {
+    "reason" : "There should be no space before and one after any comma.",
+    "character" : 64,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "comma",
+    "line" : 41,
+    "severity" : "Warning",
+    "type" : "Comma Spacing"
+  },
+  {
+    "reason" : "There should be no space before and one after any comma.",
+    "character" : 47,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "comma",
+    "line" : 46,
+    "severity" : "Warning",
+    "type" : "Comma Spacing"
+  },
+  {
+    "reason" : "There should be no space before and one after any comma.",
+    "character" : 75,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "comma",
+    "line" : 49,
+    "severity" : "Warning",
+    "type" : "Comma Spacing"
+  },
+  {
+    "reason" : "Colons should be next to the identifier when specifying a type.",
+    "character" : 6,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "colon",
+    "line" : 29,
+    "severity" : "Warning",
+    "type" : "Colon"
+  },
+  {
+    "reason" : "Force tries should be avoided.",
+    "character" : 15,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "force_try",
+    "line" : 98,
+    "severity" : "Warning",
+    "type" : "Force Try"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 24,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 27,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 30,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 32,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 36,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 38,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 40,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 51,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 52,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 57,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 60,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 61,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 64,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 80,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 81,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 96,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 113,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 121,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "TODOs and FIXMEs should be avoided.",
+    "character" : 7,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "todo",
+    "line" : 42,
+    "severity" : "Warning",
+    "type" : "Todo"
+  },
+  {
+    "reason" : "Swift constructors are preferred over legacy convenience functions.",
+    "character" : 15,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
+    "rule_id" : "legacy_constructor",
+    "line" : 62,
+    "severity" : "Warning",
+    "type" : "Legacy Constructor"
+  },
+  {
+    "reason" : "Files should have a single trailing newline.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ExtensionsAndConstants.swift",
+    "rule_id" : "trailing_newline",
+    "line" : 39,
+    "severity" : "Warning",
+    "type" : "Trailing Newline"
+  },
+  {
+    "reason" : "Opening braces should be preceded by a single space and on the same line as the declaration.",
+    "character" : 29,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ExtensionsAndConstants.swift",
+    "rule_id" : "opening_brace",
+    "line" : 32,
+    "severity" : "Warning",
+    "type" : "Opening Brace Spacing"
+  },
+  {
+    "reason" : "There should be no space before and one after any comma.",
+    "character" : 19,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ExtensionsAndConstants.swift",
+    "rule_id" : "comma",
+    "line" : 32,
+    "severity" : "Warning",
+    "type" : "Comma Spacing"
+  },
+  {
+    "reason" : "There should be no space before and one after any comma.",
+    "character" : 23,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ExtensionsAndConstants.swift",
+    "rule_id" : "comma",
+    "line" : 32,
+    "severity" : "Warning",
+    "type" : "Comma Spacing"
+  },
+  {
+    "reason" : "Colons should be next to the identifier when specifying a type.",
+    "character" : 16,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ExtensionsAndConstants.swift",
+    "rule_id" : "colon",
+    "line" : 11,
+    "severity" : "Warning",
+    "type" : "Colon"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/MainTimerViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 14,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/MainTimerViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 16,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/MainTimerViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 18,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/MainTimerViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 20,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/MainTimerViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 22,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/MainTimerViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 29,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/MainTimerViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 30,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/MainTimerViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 33,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/MainTimerViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 40,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/MainTimerViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 53,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/MainTimerViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 72,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/MainTimerViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 76,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/MainTimerViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 77,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/MainTimerViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 100,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/MainTimerViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 104,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Else and catch should be on the same line, one space after the previous declaration.",
+    "character" : 4,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/MainTimerViewController.swift",
+    "rule_id" : "statement_position",
+    "line" : 90,
+    "severity" : "Warning",
+    "type" : "Statement Position"
+  },
+  {
+    "reason" : "TODOs and FIXMEs should be avoided.",
+    "character" : 5,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/MainTimerViewController.swift",
+    "rule_id" : "todo",
+    "line" : 31,
+    "severity" : "Warning",
+    "type" : "Todo"
+  },
+  {
+    "reason" : "TODOs and FIXMEs should be avoided.",
+    "character" : 6,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/MainTimerViewController.swift",
+    "rule_id" : "todo",
+    "line" : 107,
+    "severity" : "Warning",
+    "type" : "Todo"
+  },
+  {
+    "reason" : "Swift constructors are preferred over legacy convenience functions.",
+    "character" : 21,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/MainTimerViewController.swift",
+    "rule_id" : "legacy_constructor",
+    "line" : 114,
+    "severity" : "Warning",
+    "type" : "Legacy Constructor"
+  },
+  {
+    "reason" : "Function should have complexity 2 or less: currently complexity equals 5",
+    "character" : 2,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/MainTimerViewController.swift",
+    "rule_id" : "cyclomatic_complexity",
+    "line" : 32,
+    "severity" : "Warning",
+    "type" : "Cyclomatic Complexity"
+  },
+  {
+    "reason" : "Function should have complexity 2 or less: currently complexity equals 7",
+    "character" : 12,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/MainTimerViewController.swift",
+    "rule_id" : "cyclomatic_complexity",
+    "line" : 78,
+    "severity" : "Error",
+    "type" : "Cyclomatic Complexity"
+  },
+  {
+    "reason" : "File shouldn't start with whitespace: currently starts with 1 whitespace characters",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/MainTimerViewController.swift",
+    "rule_id" : "leading_whitespace",
+    "line" : 1,
+    "severity" : "Warning",
+    "type" : "Leading Whitespace"
+  },
+  {
+    "reason" : "Files should have a single trailing newline.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "trailing_newline",
+    "line" : 157,
+    "severity" : "Warning",
+    "type" : "Trailing Newline"
+  },
+  {
+    "reason" : "Opening braces should be preceded by a single space and on the same line as the declaration.",
+    "character" : 29,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "opening_brace",
+    "line" : 25,
+    "severity" : "Warning",
+    "type" : "Opening Brace Spacing"
+  },
+  {
+    "reason" : "Force tries should be avoided.",
+    "character" : 15,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "force_try",
+    "line" : 150,
+    "severity" : "Warning",
+    "type" : "Force Try"
+  },
+  {
+    "reason" : "Force tries should be avoided.",
+    "character" : 3,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "force_try",
+    "line" : 151,
+    "severity" : "Warning",
+    "type" : "Force Try"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 26,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 33,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 35,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 38,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 40,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 42,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 44,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 46,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 48,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 50,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 52,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 71,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 86,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 99,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 111,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 123,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 132,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 141,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 148,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "TODOs and FIXMEs should be avoided.",
+    "character" : 5,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "todo",
+    "line" : 36,
+    "severity" : "Warning",
+    "type" : "Todo"
+  },
+  {
+    "reason" : "TODOs and FIXMEs should be avoided.",
+    "character" : 5,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "todo",
+    "line" : 125,
+    "severity" : "Warning",
+    "type" : "Todo"
+  },
+  {
+    "reason" : "TODOs and FIXMEs should be avoided.",
+    "character" : 6,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
+    "rule_id" : "todo",
+    "line" : 138,
+    "severity" : "Warning",
+    "type" : "Todo"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/SettingsViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 18,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/SettingsViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 21,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/SettingsViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 26,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/SettingsViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 47,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "TODOs and FIXMEs should be avoided.",
+    "character" : 5,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/SettingsViewController.swift",
+    "rule_id" : "todo",
+    "line" : 31,
+    "severity" : "Warning",
+    "type" : "Todo"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/SetToneViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 14,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/SetToneViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 18,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/SetToneViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 22,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/SetToneViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 26,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/SetToneViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 32,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/SetToneViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 44,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/SetToneViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 45,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/SetToneViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 48,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/SetToneViewController.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 54,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "TODOs and FIXMEs should be avoided.",
+    "character" : 4,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/SetToneViewController.swift",
+    "rule_id" : "todo",
+    "line" : 53,
+    "severity" : "Warning",
+    "type" : "Todo"
+  },
+  {
+    "reason" : "Files should have a single trailing newline.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ViewController.swift",
+    "rule_id" : "trailing_newline",
+    "line" : 25,
+    "severity" : "Warning",
+    "type" : "Trailing Newline"
+  },
+  {
+    "reason" : "Type name should start with an uppercase character: 'doroTests'",
+    "character" : 1,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doroTests\/doroTests.swift",
+    "rule_id" : "type_name",
+    "line" : 12,
+    "severity" : "Error",
+    "type" : "Type Name"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doroTests\/doroTests.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 13,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doroTests\/doroTests.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 18,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doroTests\/doroTests.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 23,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doroTests\/doroTests.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 28,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doroTests\/doroTests.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 35,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Type name should start with an uppercase character: 'doroUITests'",
+    "character" : 1,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doroUITests\/doroUITests.swift",
+    "rule_id" : "type_name",
+    "line" : 11,
+    "severity" : "Error",
+    "type" : "Type Name"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doroUITests\/doroUITests.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 12,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doroUITests\/doroUITests.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 15,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doroUITests\/doroUITests.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 17,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doroUITests\/doroUITests.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 25,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doroUITests\/doroUITests.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 30,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  },
+  {
+    "reason" : "Lines should not have trailing whitespace.",
+    "character" : null,
+    "file" : "\/Users\/Vmock\/Developer\/doro\/doroUITests\/doroUITests.swift",
+    "rule_id" : "trailing_whitespace",
+    "line" : 35,
+    "severity" : "Warning",
+    "type" : "Trailing Whitespace"
+  }
+]
