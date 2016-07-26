@@ -11,4 +11,4 @@ TODO :
 - [ ] Comments
 - [ ] Docs
 - [x] Lint
-- [ ] Unit tests to make sure timeLeft() works well
+- [x] Unit tests to make sure timeLeft() works well
