@@ -7,8 +7,8 @@ TODO :
 - [x] Case for failure and success 
 - [x] Save to DB on failure and/or successo
 - [ ] Notification Actions.
-- [ ] Graphs
+- [x] Graphs
 - [ ] Comments
 - [ ] Docs
-- [ ] Lint
+- [x] Lint
 - [ ] Unit tests to make sure timeLeft() works well
