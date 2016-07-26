@@ -95,7 +95,7 @@ UI testing isn't really a mature thing right now. There was an older thing calle
 
 # Things to improve
 **Humblebrag** I've tried to keep errors to a mininmum, and I haven't seen a run time crash yet, so 🖖. 
-There are, however around 5 TODOs scattered around the app, involving making the code neater like declaring strings as constants and DRYing(Don't Repeat Yourself) up the code. I'd get to it, but this is a 4 day project.
+There are, however around 5 TODOs scattered around the app, involving making the code neater like declaring strings as constants and DRYing(Don't Repeat Yourself) up the code. I'd get to it, but this was a take home project.
 
 # Credits
 
