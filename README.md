@@ -43,6 +43,8 @@ Here's a few screenshots :
 - Work: http://imgur.com/yOnaT1X
 - Break: http://imgur.com/bZcXsVW
 - Waiting: http://imgur.com/a/TUvpL (Notice the ominous background)
+
+
 # The settings screen
 This lets the user set the timer durations. It basically sets a dictionary key in the `NSUserDefaults` which is the key value store generally used for things like user settings etc.
 
