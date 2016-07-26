@@ -19,6 +19,7 @@ Feature set I started out with (neither exhaustive nor aimed at - this is basica
 The first problem I tackled was the model layer of the app - the Pomodoro tracker. All the functions related to the *pomodoro* needed to be here. The PomodoroTracker would then send *messages* to the rest of the system regarding the change in its state. This would be done using a delegation pattern (like in the MainTimerViewController) or through an NSNotification broadcast.
 
 ![ Obligatory post from NSHipster: http://nshipster.com/nsnotification-and-nsnotificationcenter ](https://i.imgur.com/a/80nxz)
+https://i.imgur.com/a/80nxz because sometimes github READMEs suck at loading images
 
 Pomodoros depend on user input to work properly (There's no way to know if your user's dozing off when (s)he's supposed to be working or Programming hard during a break period. So, a Pomodoro can exist in the following states: 
 
@@ -63,6 +64,7 @@ Ah, the charts. This was actually the hardest to implement. Turns out, Realm doe
 As for the library, I was heart set on using PhilackM's [Scrollable Graph View](https://github.com/philackm/Scrollable-GraphView) because of it's buttery smooth 60fps-iness. This, by the way is unsurprisingly achieved by deleting and adding points on the graph depending on scroll position (I spent way too much time reverse engineering how it worked, so here's a gif of what I'm talking about) : 
 
 ![](http://i.imgur.com/a/dVnuJ)
+http://i.imgur.com/a/dVnuJ
 
 Unfortunately, the library didn't support stacked bar charts (and adding that capability was beyond the scope of a take home project) so I had to use another one instead (I've forked the repo for now, and I'll probably end up adding stacked bar charts out of pure spite) . I eventually settled on [this](https://github.com/i-schuetz/SwiftCharts). 
 
