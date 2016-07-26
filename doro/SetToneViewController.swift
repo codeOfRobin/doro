@@ -49,5 +49,4 @@ class SetToneViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-	//TODO: Make sure there's one line at the end and in the beginning in every class
 }

@@ -13,7 +13,7 @@
     "character" : 15,
     "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/ChartViewController.swift",
     "rule_id" : "force_try",
-    "line" : 99,
+    "line" : 102,
     "severity" : "Warning",
     "type" : "Force Try"
   },
@@ -40,7 +40,7 @@
     "character" : 15,
     "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
     "rule_id" : "force_try",
-    "line" : 149,
+    "line" : 180,
     "severity" : "Warning",
     "type" : "Force Try"
   },
@@ -49,7 +49,7 @@
     "character" : 3,
     "file" : "\/Users\/Vmock\/Developer\/doro\/doro\/PomodoroTracker.swift",
     "rule_id" : "force_try",
-    "line" : 150,
+    "line" : 181,
     "severity" : "Warning",
     "type" : "Force Try"
   }

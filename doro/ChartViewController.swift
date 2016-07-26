@@ -13,7 +13,6 @@ import RealmSwift
 
 class ChartViewController: UIViewController {
 
-	//TODO: Dismiss button
 	private var chart: Chart? // arc
 	// http://stackoverflow.com/questions/24007461/how-to-enumerate-an-enum-with-string-type
 	enum DaysOfWeek: String {
@@ -26,6 +25,9 @@ class ChartViewController: UIViewController {
 		static let allValues = [Monday, Tuesday, Wednesday, Thursday, Friday]
 	}
 
+	@IBAction func dismissButtonTapped(sender: UIButton) {
+		self.dismissViewControllerAnimated(true, completion: nil)
+	}
 	//NOTE: I _might_ have prematurely tried to be cute here. But alteast I have type safety ¯\_(ツ)_/¯
 	var chartData: [DaysOfWeek:(Int, Int)] = [:]
 

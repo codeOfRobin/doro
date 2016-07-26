@@ -9,46 +9,69 @@
 import UIKit
 import RealmSwift
 
+
+/// A set of states which the pomodoro can exist in
 enum PomodoroState {
+	/// HasntStarted: Before the user activates a work period
 	case HasntStarted,
+	/// Success: A pomodoro *cycle*, i.e a work period and a cycle were completed
 	Success,
+	/// Failure: Indicates a user has abandoned a pomodoro cycle
 	Failure,
+	/// Waiting: an intermediary state between a work-to-break or a break-to-work transition
 	Waiting,
+	/// A work period
 	Work,
+	/// A break period
 	Break
 }
 
+/// A delegate to inform a viewController that the pomodoro has changed state
 protocol PomodoroTrackerDelegate {
 	func pomodoroDidChangeState()
 }
 
+/// The PomodoroTracker class. Responsible for anything the pomodoro does - time tracking, state transitions etc.
 class PomodoroTracker: Object {
+
+	/// The state of the pomodoro. It's an enum that activates the delegate method `pomodoroDidChangeState` everytime it runs
 	var state: PomodoroState = .HasntStarted {
 		didSet {
 			delegate?.pomodoroDidChangeState()
 		}
 	}
+
+	/// A property for the realm DB as realm doesn't support enums. Specifies Failure and/or Success states
 	var wasSuccessfulOnDBSave = false
 
+	/// Tracks the previous state of the pomodoro. Important when in the Waiting state so the pomodoro knows which one comes next
 	var prevState: PomodoroState?
 
-	// TODO: check if this can be a lazy var
+	/// The time when a work period starts
 	var workStartTime = NSDate()
 
+	/// The time interval of a work period
 	var workTimeInterval = NSUserDefaults.standardUserDefaults().valueForKey("workTimeInterval") as? NSTimeInterval ?? NSTimeInterval(integerLiteral: 25*60)
 
+	/// The time when a break period starts
 	var breakStartTime = NSDate()
 
+	/// The time interval of a break period
 	var breakTimeInterval = NSUserDefaults.standardUserDefaults().valueForKey("breakTimeInterval") as? NSTimeInterval ?? NSTimeInterval(integerLiteral: 5*60)
 
+	/// The time when a waiting period starts
 	var waitingStartTime = NSDate()
 
+	/// The time interval of a waiting period
 	let waitingTimeInterval = NSTimeInterval(30)
 
+	/// The delegate that 'listens' for a change in the Pomodoro state
 	var delegate: PomodoroTrackerDelegate?
 
+	/// Since this is a singleton
 	static let sharedPomodoroTracker = PomodoroTracker()
 
+	/// returns the timeLeft in any state. Never returns invalid negative times
 	var timeLeft: NSTimeInterval {
 		switch state {
 		case .Work:
@@ -68,6 +91,7 @@ class PomodoroTracker: Object {
 		}
 	}
 
+	/// Pretty printed time for the UILabel. This is a swift computed property
 	var prettyPrintedTimeLeft: String {
 		if timeLeft < 0 {
 			return "00:00"
@@ -83,6 +107,7 @@ class PomodoroTracker: Object {
 		return "\(minutes):\(seconds)"
 	}
 
+	/// Start a waiting period. Also starts a notification that gets posted in 30 seconds, failing the pomodoro if not necessary
 	func startWaiting() {
 		prevState = state
 		state = .Waiting
@@ -96,6 +121,7 @@ class PomodoroTracker: Object {
 		UIApplication.sharedApplication().scheduleLocalNotification(notification)
 	}
 
+	/// Starts a working period. Schedules a notification for when it ends so a waiting period can start
 	func startWork() {
 		state = .Work
 		workStartTime = NSDate()
@@ -108,6 +134,7 @@ class PomodoroTracker: Object {
 		UIApplication.sharedApplication().scheduleLocalNotification(notification)
 	}
 
+	/// Starts a break period. Schedules a notification for when it ends so a waiting period can start
 	func startbreak() {
 		state = .Break
 		breakStartTime = NSDate()
@@ -120,6 +147,7 @@ class PomodoroTracker: Object {
 		UIApplication.sharedApplication().scheduleLocalNotification(notification)
 	}
 
+	/// reinitializes the pomodoro so it can be reused
 	func reinitPomodoro() {
 		//TODO: DRY up this code and the property inits as well
 		state = .HasntStarted
@@ -129,6 +157,7 @@ class PomodoroTracker: Object {
 		breakTimeInterval = NSUserDefaults.standardUserDefaults().valueForKey("breakTimeInterval") as? NSTimeInterval ?? NSTimeInterval(integerLiteral: 5*60)
 	}
 
+	/// executed to register a successful pomodoro cycle
 	func successfulPomodoro() {
 		UIApplication.sharedApplication().cancelAllLocalNotifications()
 		state = .Success
@@ -138,6 +167,7 @@ class PomodoroTracker: Object {
 		reinitPomodoro()
 	}
 
+	/// executed to register a failed pomodoro cycle
 	func abandonPomodoro() {
 		UIApplication.sharedApplication().cancelAllLocalNotifications()
 		state = .Failure
@@ -145,6 +175,7 @@ class PomodoroTracker: Object {
 		saveToDB()
 	}
 
+	/// Save to the Realm Database
 	func saveToDB() {
 		let realm = try! Realm()
 		try! realm.write {

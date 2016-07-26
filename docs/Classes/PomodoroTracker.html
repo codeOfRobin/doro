@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PomodoroTracker Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/PomodoroTracker" class="dashAnchor"></a>
+    <a title="PomodoroTracker Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (37% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        PomodoroTracker Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AppDelegate.html">AppDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AudioPlayer.html">AudioPlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ChartViewController.html">ChartViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ChartViewController/DaysOfWeek.html">– DaysOfWeek</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MainTimerViewController.html">MainTimerViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PomodoroTracker.html">PomodoroTracker</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SetToneViewController.html">SetToneViewController</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SettingsViewController.html">SettingsViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5_doro16currentSoundNameSS">currentSoundName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:v5_doro9toneNamesGSaSS_">toneNames</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/PomodoroState.html">PomodoroState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Array.html">Array</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5_doro9showAlertFTSS7messageSS12presentingVCCSo16UIViewController_T_">showAlert(_:message:presentingVC:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F5_doro16showFailureAlertFT2inCSo16UIViewController_T_">showFailureAlert(in:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/PomodoroTrackerDelegate.html">PomodoroTrackerDelegate</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>PomodoroTracker</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">class</span> <span class="kt">PomodoroTracker</span><span class="p">:</span> <span class="kt">Object</span></code></pre>
+
+                </div>
+              </div>
+            <p>The PomodoroTracker class. Responsible for anything the pomodoro does - time tracking, state transitions etc.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5_doro15PomodoroTracker5stateOS_13PomodoroState"></a>
+                    <a name="//apple_ref/swift/Property/state" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5_doro15PomodoroTracker5stateOS_13PomodoroState">state</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The state of the pomodoro. It&rsquo;s an enum that activates the delegate method <code>pomodoroDidChangeState</code> everytime it runs</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../Enums/PomodoroState.html">PomodoroState</a></span> <span class="o">=</span> <span class="o">.</span><span class="kt">HasntStarted</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5_doro15PomodoroTracker21wasSuccessfulOnDBSaveSb"></a>
+                    <a name="//apple_ref/swift/Property/wasSuccessfulOnDBSave" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5_doro15PomodoroTracker21wasSuccessfulOnDBSaveSb">wasSuccessfulOnDBSave</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A property for the realm DB as realm doesn&rsquo;t support enums. Specifies Failure and/or Success states</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">wasSuccessfulOnDBSave</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5_doro15PomodoroTracker9prevStateGSqOS_13PomodoroState_"></a>
+                    <a name="//apple_ref/swift/Property/prevState" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5_doro15PomodoroTracker9prevStateGSqOS_13PomodoroState_">prevState</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tracks the previous state of the pomodoro. Important when in the Waiting state so the pomodoro knows which one comes next</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">prevState</span><span class="p">:</span> <span class="kt"><a href="../Enums/PomodoroState.html">PomodoroState</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/TODO:%20check%20if%20this%20can%20be%20a%20lazy%20var"></a>
+                <a name="//apple_ref/swift/Section/TODO: check if this can be a lazy var" class="dashAnchor"></a>
+                <a href="#/TODO:%20check%20if%20this%20can%20be%20a%20lazy%20var">
+                  <h3 class="section-name">TODO: check if this can be a lazy var</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5_doro15PomodoroTracker13workStartTimeCSo6NSDate"></a>
+                    <a name="//apple_ref/swift/Property/workStartTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5_doro15PomodoroTracker13workStartTimeCSo6NSDate">workStartTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The time when a work period starts</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">workStartTime</span> <span class="o">=</span> <span class="kt">NSDate</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5_doro15PomodoroTracker16workTimeIntervalSd"></a>
+                    <a name="//apple_ref/swift/Property/workTimeInterval" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5_doro15PomodoroTracker16workTimeIntervalSd">workTimeInterval</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The time interval of a work period</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">workTimeInterval</span> <span class="o">=</span> <span class="kt">NSUserDefaults</span><span class="o">.</span><span class="nf">standardUserDefaults</span><span class="p">()</span><span class="o">.</span><span class="nf">valueForKey</span><span class="p">(</span><span class="s">"workTimeInterval"</span><span class="p">)</span> <span class="k">as?</span> <span class="kt">NSTimeInterval</span> <span class="p">??</span> <span class="kt">NSTimeInterval</span><span class="p">(</span><span class="nv">integerLiteral</span><span class="p">:</span> <span class="mf">25*</span><span class="mi">60</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5_doro15PomodoroTracker14breakStartTimeCSo6NSDate"></a>
+                    <a name="//apple_ref/swift/Property/breakStartTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5_doro15PomodoroTracker14breakStartTimeCSo6NSDate">breakStartTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The time when a break period starts</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">breakStartTime</span> <span class="o">=</span> <span class="kt">NSDate</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5_doro15PomodoroTracker17breakTimeIntervalSd"></a>
+                    <a name="//apple_ref/swift/Property/breakTimeInterval" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5_doro15PomodoroTracker17breakTimeIntervalSd">breakTimeInterval</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The time interval of a break period</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">breakTimeInterval</span> <span class="o">=</span> <span class="kt">NSUserDefaults</span><span class="o">.</span><span class="nf">standardUserDefaults</span><span class="p">()</span><span class="o">.</span><span class="nf">valueForKey</span><span class="p">(</span><span class="s">"breakTimeInterval"</span><span class="p">)</span> <span class="k">as?</span> <span class="kt">NSTimeInterval</span> <span class="p">??</span> <span class="kt">NSTimeInterval</span><span class="p">(</span><span class="nv">integerLiteral</span><span class="p">:</span> <span class="mf">5*</span><span class="mi">60</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5_doro15PomodoroTracker16waitingStartTimeCSo6NSDate"></a>
+                    <a name="//apple_ref/swift/Property/waitingStartTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5_doro15PomodoroTracker16waitingStartTimeCSo6NSDate">waitingStartTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The time when a waiting period starts</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">waitingStartTime</span> <span class="o">=</span> <span class="kt">NSDate</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5_doro15PomodoroTracker19waitingTimeIntervalSd"></a>
+                    <a name="//apple_ref/swift/Property/waitingTimeInterval" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5_doro15PomodoroTracker19waitingTimeIntervalSd">waitingTimeInterval</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The time interval of a waiting period</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">waitingTimeInterval</span> <span class="o">=</span> <span class="kt">NSTimeInterval</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5_doro15PomodoroTracker8delegateGSqPS_23PomodoroTrackerDelegate__"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5_doro15PomodoroTracker8delegateGSqPS_23PomodoroTrackerDelegate__">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The delegate that &lsquo;listens&rsquo; for a change in the Pomodoro state</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/PomodoroTrackerDelegate.html">PomodoroTrackerDelegate</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC5_doro15PomodoroTracker21sharedPomodoroTrackerS0_"></a>
+                    <a name="//apple_ref/swift/Variable/sharedPomodoroTracker" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC5_doro15PomodoroTracker21sharedPomodoroTrackerS0_">sharedPomodoroTracker</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Since this is a singleton</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">sharedPomodoroTracker</span> <span class="o">=</span> <span class="kt">PomodoroTracker</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5_doro15PomodoroTracker8timeLeftSd"></a>
+                    <a name="//apple_ref/swift/Property/timeLeft" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5_doro15PomodoroTracker8timeLeftSd">timeLeft</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>returns the timeLeft in any state. Never returns invalid negative times</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">timeLeft</span><span class="p">:</span> <span class="kt">NSTimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC5_doro15PomodoroTracker21prettyPrintedTimeLeftSS"></a>
+                    <a name="//apple_ref/swift/Property/prettyPrintedTimeLeft" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC5_doro15PomodoroTracker21prettyPrintedTimeLeftSS">prettyPrintedTimeLeft</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Pretty printed time for the UILabel. This is a swift computed property</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">prettyPrintedTimeLeft</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5_doro15PomodoroTracker12startWaitingFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/startWaiting()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5_doro15PomodoroTracker12startWaitingFT_T_">startWaiting()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Start a waiting period. Also starts a notification that gets posted in 30 seconds, failing the pomodoro if not necessary</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">startWaiting</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5_doro15PomodoroTracker9startWorkFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/startWork()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5_doro15PomodoroTracker9startWorkFT_T_">startWork()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Starts a working period. Schedules a notification for when it ends so a waiting period can start</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">startWork</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5_doro15PomodoroTracker10startbreakFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/startbreak()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5_doro15PomodoroTracker10startbreakFT_T_">startbreak()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Starts a break period. Schedules a notification for when it ends so a waiting period can start</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">startbreak</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5_doro15PomodoroTracker14reinitPomodoroFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/reinitPomodoro()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5_doro15PomodoroTracker14reinitPomodoroFT_T_">reinitPomodoro()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>reinitializes the pomodoro so it can be reused</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">reinitPomodoro</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5_doro15PomodoroTracker18successfulPomodoroFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/successfulPomodoro()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5_doro15PomodoroTracker18successfulPomodoroFT_T_">successfulPomodoro()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>executed to register a successful pomodoro cycle</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">successfulPomodoro</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5_doro15PomodoroTracker15abandonPomodoroFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/abandonPomodoro()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5_doro15PomodoroTracker15abandonPomodoroFT_T_">abandonPomodoro()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>executed to register a failed pomodoro cycle</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">abandonPomodoro</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC5_doro15PomodoroTracker8saveToDBFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/saveToDB()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC5_doro15PomodoroTracker8saveToDBFT_T_">saveToDB()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Save to the Realm Database</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">saveToDB</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2016-07-26)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
