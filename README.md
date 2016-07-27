@@ -38,10 +38,10 @@ This screen has 2 labels - one displaying the time left and another representing
 
 Here's a few screenshots :
 
-- HasntStarted : http://imgur.com/eqA0LMI
-- Work: http://imgur.com/yOnaT1X
-- Break: http://imgur.com/bZcXsVW
-- Waiting: http://imgur.com/a/TUvpL (Notice the ominous background)
+- HasntStarted : ![](http://i.imgur.com/eqA0LMI.png)
+- Work: ![](http://i.imgur.com/yOnaT1X.png)
+- Break: ![](http://i.imgur.com/bZcXsVW.png)
+- Waiting: (Notice the ominous background) ![](http://i.imgur.com/YX5VVnv.png)
 
 
 # The settings screen
@@ -64,20 +64,22 @@ Ah, the charts. This was actually the hardest to implement. Turns out, Realm doe
 
 As for the library, I was heart set on using PhilackM's [Scrollable Graph View](https://github.com/philackm/Scrollable-GraphView) because of it's buttery smooth 60fps-iness. This, by the way is unsurprisingly achieved by deleting and adding points on the graph depending on scroll position (I spent way too much time reverse engineering how it worked, so here's a gif of what I'm talking about) : 
 
-![](http://i.imgur.com/a/dVnuJ)
-http://i.imgur.com/a/dVnuJ
+![](http://i.imgur.com/q5xcI8H.gif)
 
 Unfortunately, the library didn't support stacked bar charts (and adding that capability was beyond the scope of a take home project) so I had to use another one instead (I've forked the repo for now, and I'll probably end up adding stacked bar charts out of pure spite) . I eventually settled on [this](https://github.com/i-schuetz/SwiftCharts). 
 
 There's nothing special going on here otherwise, and realm is super fast with querying so I can get the latest pomodoro objects on the main thread itself.
 
-Obligatory screenshot: http://imgur.com/a/81pzc
+Obligatory screenshot: ![](http://i.imgur.com/49JQvvV.png)
+
 # Realm
-Realm by the awesome guys at Realm.io came highly recommended (The android guys over at Housing labs were using it). The docs were pretty, and they've [sponsored](https://realm.io/news/jorge-ortiz-unit-testing-swift-2/) several [amazing iOS events](https://realm.io/news/slug-edward-jiang-server-side-swift/). They also happen to be maintaining the documentation engine as well as the linter that I'm using, so I guess I'm kinda sorta indebted to them.
+
+Realm by the awesome guys at [Realm.io](http://realm.io/) came highly recommended (The android devs over at Housing labs were using it). The docs were pretty, and they've [sponsored](https://realm.io/news/jorge-ortiz-unit-testing-swift-2/) several [amazing iOS events](https://realm.io/news/slug-edward-jiang-server-side-swift/). They also happen to be maintaining the documentation engine as well as the linter that I'm using, so I guess I'm kinda sorta indebted to them.
 
 Other than the enum fiasco, it's worked solidly for me and I'm super happy with the results.
 
 # Linting
+
 I'm using [swiftlint](https://github.com/realm/SwiftLint) by realm, with strictest rules(I like to call it the highest difficulty level) following Github's [Swift Style Guide](https://github.com/github/swift-style-guide). I'ms stuck on ~6 errors, one of which is a false positive that I've documented and the other 5 are things I really need to fix (having 7 switch cases seems a little too much, if you ask me, but I'm not sure how I'd fix it).
 
 # Documentation
@@ -93,7 +95,7 @@ Swift, being a statically typed language eliminates huge common classes of error
 UI testing isn't really a mature thing right now. There was an older thing called KIF(Keep It Functional), but AFAIK it isn't maintained after Apple introduced a first party solution. It's still relatively young, and I haven't explored it as much.
 
 # Things to improve
-**Humblebrag** I've tried to keep errors to a mininmum, and I haven't seen a run time crash yet, so 🖖. 
+**Humblebrag** I've tried to keep errors to a mininmum, and I haven't seen a run time crash yet, so ~🖖~ (Apparently, that's the vulcan salute and not a fingers-crossed emoji). 
 There are, however around 5 TODOs scattered around the app, involving making the code neater like declaring strings as constants and DRYing(Don't Repeat Yourself) up the code. I'd get to it, but this was a take home project.
 
 # Credits
