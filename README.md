@@ -39,9 +39,9 @@ This screen has 2 labels - one displaying the time left and another representing
 Here's a few screenshots :
 
 - HasntStarted : ![](http://i.imgur.com/eqA0LMI.png)
-- Work: ![](http://i.imgur.com/yOnaT1X.png)
-- Break: ![](http://i.imgur.com/bZcXsVW.png)
-- Waiting: (Notice the ominous background) ![](http://i.imgur.com/YX5VVnv.png)
+- Work :  ![](http://i.imgur.com/yOnaT1X.png)
+- Break : ![](http://i.imgur.com/bZcXsVW.png)
+- Waiting :  (Notice the ominous background) ![](http://i.imgur.com/YX5VVnv.png)
 
 
 # The settings screen
