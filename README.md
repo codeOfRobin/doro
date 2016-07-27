@@ -95,7 +95,7 @@ Swift, being a statically typed language eliminates huge common classes of error
 UI testing isn't really a mature thing right now. There was an older thing called KIF(Keep It Functional), but AFAIK it isn't maintained after Apple introduced a first party solution. It's still relatively young, and I haven't explored it as much.
 
 # Things to improve
-**Humblebrag** I've tried to keep errors to a mininmum, and I haven't seen a run time crash yet, so ~🖖~ (Apparently, that's the vulcan salute and not a fingers-crossed emoji). 
+**Humblebrag** I've tried to keep errors to a mininmum, and I haven't seen a run time crash yet, so ~~🖖~~ (Apparently, that's the vulcan salute and not a fingers-crossed emoji). 
 There are, however around 5 TODOs scattered around the app, involving making the code neater like declaring strings as constants and DRYing(Don't Repeat Yourself) up the code. I'd get to it, but this was a take home project.
 
 # Credits
