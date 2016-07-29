@@ -2,7 +2,7 @@
 
 Jared Sinclair recently announced his new podcast app, called 'sodes. 
 
-https://twitter.com/jaredsinclair/status/756480795586375680
+https://twitter.com/jaredsinclair/status/756480795586375680 
 
 This announcement was very well received in the iOS community (there's already a set of great podcast apps like Pocket Casts and Marco Arment's Overcast, so this will no doubt add to the vibrant podcasting ecosystem on  platforms)
 
